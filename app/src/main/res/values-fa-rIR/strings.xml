@@ -1,0 +1,85 @@
+<resources>
+    <string name="new_game">بازی جدید</string>
+    <string name="about">درباره</string>
+    <string name="about_app">درباره برنامه</string>
+    <string name="add_player">افزودن بازیکن</string>
+    <string name="name">نام</string>
+    <string name="back">بازگشت</string>
+    <string name="icon">آیکون</string>
+    <string name="delete_player">حذف بازیکن</string>
+    <string name="double_back_press_message">برای خروج دوباره فشار دهید</string>
+    <string name="add_level">افزودن سطح</string>
+    <string name="sub_level">کاهش سطح</string>
+    <string name="add_bonus">افزودن پاداش</string>
+    <string name="sub_bonus">کاهش پاداش</string>
+    <string name="title_settings">تنظیمات</string>
+    <string name="terms_title">شرایط استفاده</string>
+    <string name="language">زبان</string>
+    <string name="donate">اهدای کمک</string>
+    <string name="donate_footer_thanks">از حمایت شما متشکریم!</string>
+    <string name="donate_selected_prefix">انتخاب شده: </string>
+    <string name="donate_copy_cd">کپی</string>
+    <string name="donate_header_hint">اگر برنامه را دوست دارید، لطفاً از توسعه آن پشتیبانی کنید.</string>
+    <string name="app">برنامه</string>
+    <string name="label_dark_mode">حالت تاریک</string>
+    <string name="terms_of_use">شرایط استفاده</string>
+    <string name="terms_last_updated">آخرین به‌روزرسانی: %1$s</string>
+    <string name="terms_default_date">دسامبر 2024</string>
+    <string name="terms_section_1_title">1. پذیرش شرایط</string>
+    <string name="terms_section_1_content">با نصب یا استفاده از این برنامه، شما با این شرایط استفاده موافقت می‌کنید. اگر با هر بخشی از شرایط موافق نیستید، لطفاً از برنامه استفاده نکنید.</string>
+    <string name="terms_section_2_title">2. توضیحات برنامه</string>
+    <string name="terms_section_2_content">این برنامه یک شمارنده قدرت شخصیت ساده است که برای بازی رومیزی Munchkin طراحی شده است. به بازیکنان کمک می‌کند تا قدرت شخصیت را در طول بازی محاسبه و ردیابی کنند. برنامه به طور کامل آفلاین کار می‌کند و به دسترسی شبکه نیاز ندارد.</string>
+    <string name="terms_section_3_title">3. عدم جمع‌آوری داده‌های شخصی</string>
+    <string name="terms_section_3_content">این برنامه هیچ اطلاعات شخصی را جمع‌آوری، ذخیره، پردازش یا به اشتراک نمی‌گذارد. هیچ حساب کاربری، تجزیه و تحلیل، ردیابی یا شناسه‌ای استفاده نمی‌شود.</string>
+    <string name="terms_section_4_title">4. عملکرد آفلاین</string>
+    <string name="terms_section_4_content">این برنامه به طور کامل روی دستگاه شما کار می‌کند. به اینترنت، سرورهای خارجی یا خدمات شخص ثالث متصل نمی‌شود.</string>
+    <string name="terms_section_5_title">5. بدون تبلیغات</string>
+    <string name="terms_section_5_content">این برنامه هیچ تبلیغاتی ندارد و هیچ محتوای تبلیغاتی از هر نوعی نمایش نمی‌دهد.</string>
+    <string name="terms_section_6_title">6. استفاده مورد نظر</string>
+    <string name="terms_section_6_content">این برنامه فقط برای اهداف سرگرمی است و برای استفاده به عنوان ابزار کمکی هنگام بازی Munchkin طراحی شده است. جایگزین قوانین یا مواد رسمی بازی نیست.</string>
+    <string name="terms_section_7_title">7. مالکیت فکری</string>
+    <string name="terms_section_7_content">تمام حقوق برنامه، از جمله طراحی، کد و رابط آن، متعلق به توسعه‌دهنده است. نام Munchkin و محتوای مرتبط متعلق به صاحبان مربوطه است و با این برنامه وابسته یا تأیید نشده است.</string>
+    <string name="terms_section_8_title">8. رد ضمانت</string>
+    <string name="terms_section_8_content">این برنامه "همانطور که هست" ارائه می‌شود، بدون هیچ گونه ضمانتی. توسعه‌دهنده تضمین نمی‌کند که برنامه بدون خطا یا بدون وقفه باشد.</string>
+    <string name="terms_section_9_title">9. محدودیت مسئولیت</string>
+    <string name="terms_section_9_content">توسعه‌دهنده مسئول هیچ خسارت، ضرر یا مشکلی ناشی از استفاده یا عدم امکان استفاده از برنامه نیست.</string>
+    <string name="terms_section_10_title">10. تغییرات در شرایط</string>
+    <string name="terms_section_10_content">این شرایط استفاده ممکن است در آینده به‌روزرسانی شود. استفاده مداوم از برنامه پس از تغییرات، پذیرش شرایط به‌روزرسانی شده را تشکیل می‌دهد.</string>
+    <string name="terms_section_11_title">11. اطلاعات تماس</string>
+    <string name="terms_section_11_content">اگر در مورد این شرایط استفاده سوال یا بازخوردی دارید، می‌توانید از طریق پلتفرمی که برنامه در آن توزیع می‌شود با توسعه‌دهنده تماس بگیرید.</string>
+    <string name="terms_footer">با استفاده از Simple Munchkin Counter، شما تأیید می‌کنید که این شرایط استفاده را خوانده، درک کرده و موافقت کرده‌اید که به آن‌ها پایبند باشید.</string>
+    <string name="terms_accept_button">پذیرش شرایط</string>
+    <string name="munchkin_counter">شمارنده Munchkin</string>
+    <string name="new_game_title">بازی جدید</string>
+    <string name="new_game_message">آیا مطمئن هستید که می‌خواهید یک بازی جدید شروع کنید؟</string>
+    <string name="confirm">تأیید</string>
+    <string name="cancel">لغو</string>
+    <string name="add">افزودن</string>
+    <string name="add_player_message">آیکون و نام بازیکن را انتخاب کنید</string>
+    <string name="input_name">وارد کردن نام</string>
+    <string name="select_icon">انتخاب آیکون</string>
+    <string name="active_players">بازیکنان فعال</string>
+    <string name="select_player_toast_message">لطفاً یک بازیکن انتخاب کنید</string>
+    <string name="add_player_toast_message">برای افزودن بازیکنان بیشتر، تنظیمات را باز کنید</string>
+    <string name="max_lenght_name">حداکثر طول نام</string>
+    <string name="remove_player">حذف بازیکن</string>
+    <string name="game_empty_active_players_list">هیچ بازیکن فعالی وجود ندارد. لطفاً بازیکنان را در تنظیمات اضافه کنید</string>
+    <string name="application_title">برنامه</string>
+    <string name="application_description">این برنامه یک شمارنده قدرت ساده و سبک برای بازی رومیزی Munchkin است.</string>
+    <string name="how_it_works_title">نحوه کار</string>
+    <string name="how_it_works_body">به بازیکنان کمک می‌کند تا قدرت شخصیت را در طول بازی به سرعت محاسبه و ردیابی کنند، بنابراین می‌توانید به جای ریاضی روی بازی تمرکز کنید.
+برنامه به طور کامل آفلاین کار می‌کند، هیچ داده شخصی جمع‌آوری نمی‌کند، هیچ تبلیغاتی ندارد و از دسترسی شبکه استفاده نمی‌کند.
+توسط یک طرفدار Munchkin به عنوان یک همراه مناسب برای بازی غیررسمی و مناسب میز ایجاد شده است.</string>
+    <string name="version_title">نسخه</string>
+    <string name="privacy_title">حریم خصوصی</string>
+    <string name="privacy_text">ما داده‌های شخصی جمع‌آوری نمی‌کنیم.</string>
+    <string name="rate_app_title">Rate app</string>
+    <string name="rate_app_button">Rate this app</string>
+    <string name="game_empty_players_list">خالی است.\nلطفاً بازیکنان را اضافه کنید</string>
+    <string name="retry">تلاش مجدد</string>
+    <string name="error_description">اتصال خود را بررسی کنید و دوباره تلاش کنید</string>
+    <string name="dice">تاس</string>
+    <string name="throw_dice">انداختن 🎲</string>
+
+</resources>
+

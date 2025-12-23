@@ -1,0 +1,85 @@
+<resources>
+    <string name="new_game">نیا کھیل</string>
+    <string name="about">کے بارے میں</string>
+    <string name="about_app">ایپ کے بارے میں</string>
+    <string name="add_player">کھلاڑی شامل کریں</string>
+    <string name="name">نام</string>
+    <string name="back">واپس</string>
+    <string name="icon">آئیکن</string>
+    <string name="delete_player">کھلاڑی حذف کریں</string>
+    <string name="double_back_press_message">باہر نکلنے کے لیے دوبارہ دبائیں</string>
+    <string name="add_level">لیول شامل کریں</string>
+    <string name="sub_level">لیول کم کریں</string>
+    <string name="add_bonus">بونس شامل کریں</string>
+    <string name="sub_bonus">بونس کم کریں</string>
+    <string name="title_settings">ترتیبات</string>
+    <string name="terms_title">استعمال کی شرائط</string>
+    <string name="language">زبان</string>
+    <string name="donate">عطیہ دیں</string>
+    <string name="donate_footer_thanks">آپ کی حمایت کا شکریہ!</string>
+    <string name="donate_selected_prefix">منتخب: </string>
+    <string name="donate_copy_cd">کاپی کریں</string>
+    <string name="donate_header_hint">اگر آپ کو ایپ پسند ہے، تو براہ کرم ترقی میں مدد کرنے پر غور کریں۔</string>
+    <string name="app">ایپ</string>
+    <string name="label_dark_mode">ڈارک موڈ</string>
+    <string name="terms_of_use">استعمال کی شرائط</string>
+    <string name="terms_last_updated">آخری اپ ڈیٹ: %1$s</string>
+    <string name="terms_default_date">دسمبر 2024</string>
+    <string name="terms_section_1_title">1. شرائط کی قبولیت</string>
+    <string name="terms_section_1_content">اس ایپلی کیشن کو انسٹال یا استعمال کرنے سے، آپ ان استعمال کی شرائط سے متفق ہیں۔ اگر آپ شرائط کے کسی بھی حصے سے متفق نہیں ہیں، تو براہ کرم ایپ استعمال نہ کریں۔</string>
+    <string name="terms_section_2_title">2. ایپلی کیشن کی تفصیل</string>
+    <string name="terms_section_2_content">یہ ایپلی کیشن بورڈ گیم Munchkin کے لیے ڈیزائن کیا گیا ایک سادہ کردار طاقت کاؤنٹر ہے۔ یہ کھلاڑیوں کو کھیل کے دوران کردار کی طاقت کا حساب لگانے اور ٹریک کرنے میں مدد کرتا ہے۔ ایپ مکمل طور پر آف لائن کام کرتی ہے اور نیٹ ورک تک رسائی کی ضرورت نہیں ہے۔</string>
+    <string name="terms_section_3_title">3. کوئی ذاتی ڈیٹا جمع نہیں</string>
+    <string name="terms_section_3_content">یہ ایپلی کیشن کوئی ذاتی معلومات جمع، ذخیرہ، پروسیس یا شیئر نہیں کرتی۔ کوئی صارف اکاؤنٹس، تجزیات، ٹریکنگ یا شناخت کنندگان استعمال نہیں کیے جاتے۔</string>
+    <string name="terms_section_4_title">4. آف لائن فعالیت</string>
+    <string name="terms_section_4_content">یہ ایپلی کیشن مکمل طور پر آپ کے ڈیوائس پر کام کرتی ہے۔ یہ انٹرنیٹ، بیرونی سرورز یا تیسرے فریق کی خدمات سے منسلک نہیں ہوتی۔</string>
+    <string name="terms_section_5_title">5. کوئی اشتہارات نہیں</string>
+    <string name="terms_section_5_content">یہ ایپلی کیشن میں کوئی اشتہارات نہیں ہیں اور کسی بھی قسم کا پروموشنل مواد نہیں دکھاتی۔</string>
+    <string name="terms_section_6_title">6. مقصود استعمال</string>
+    <string name="terms_section_6_content">یہ ایپلی کیشن صرف تفریحی مقاصد کے لیے ہے اور Munchkin کھیلتے وقت معاون آلے کے طور پر استعمال کرنے کے لیے ڈیزائن کیا گیا ہے۔ یہ سرکاری کھیل کے قواعد یا مواد کو تبدیل نہیں کرتا۔</string>
+    <string name="terms_section_7_title">7. دانشورانہ ملکیت</string>
+    <string name="terms_section_7_content">ایپلی کیشن کے تمام حقوق، بشمول اس کا ڈیزائن، کوڈ اور انٹرفیس، ڈویلپر کے ہیں۔ Munchkin کا نام اور متعلقہ مواد ان کے متعلقہ مالکان کی ملکیت ہیں اور اس ایپلی کیشن سے وابستہ یا منظور شدہ نہیں ہیں۔</string>
+    <string name="terms_section_8_title">8. ضمانت کا انکار</string>
+    <string name="terms_section_8_content">یہ ایپلی کیشن "جیسا ہے" فراہم کی جاتی ہے، بغیر کسی قسم کی ضمانت کے۔ ڈویلپر یہ ضمانت نہیں دیتا کہ ایپ غلطی سے پاک یا بلا تعطل ہوگی۔</string>
+    <string name="terms_section_9_title">9. ذمہ داری کی حد</string>
+    <string name="terms_section_9_content">ڈویلپر ایپلی کیشن کے استعمال یا استعمال کرنے میں ناکامی سے پیدا ہونے والے کسی بھی نقصان، نقصان یا مسائل کے لیے ذمہ دار نہیں ہے۔</string>
+    <string name="terms_section_10_title">10. شرائط میں تبدیلیاں</string>
+    <string name="terms_section_10_content">یہ استعمال کی شرائط مستقبل میں اپ ڈیٹ کی جا سکتی ہیں۔ تبدیلیوں کے بعد ایپلی کیشن کا مسلسل استعمال اپ ڈیٹ شدہ شرائط کی قبولیت کا حصہ ہے۔</string>
+    <string name="terms_section_11_title">11. رابطے کی معلومات</string>
+    <string name="terms_section_11_content">اگر آپ کے پاس ان استعمال کی شرائط کے بارے میں سوالات یا آراء ہیں، تو آپ اس پلیٹ فارم کے ذریعے ڈویلپر سے رابطہ کر سکتے ہیں جہاں ایپلی کیشن تقسیم کی جاتی ہے۔</string>
+    <string name="terms_footer">Simple Munchkin Counter استعمال کرکے، آپ تسلیم کرتے ہیں کہ آپ نے ان استعمال کی شرائط کو پڑھا، سمجھا اور ان سے پابند ہونے پر رضامند ہیں۔</string>
+    <string name="terms_accept_button">شرائط قبول کریں</string>
+    <string name="munchkin_counter">Munchkin کاؤنٹر</string>
+    <string name="new_game_title">نیا کھیل</string>
+    <string name="new_game_message">کیا آپ واقعی ایک نیا کھیل شروع کرنا چاہتے ہیں؟</string>
+    <string name="confirm">تصدیق کریں</string>
+    <string name="cancel">منسوخ کریں</string>
+    <string name="add">شامل کریں</string>
+    <string name="add_player_message">کھلاڑی کا آئیکن اور نام منتخب کریں</string>
+    <string name="input_name">نام درج کریں</string>
+    <string name="select_icon">آئیکن منتخب کریں</string>
+    <string name="active_players">فعال کھلاڑی</string>
+    <string name="select_player_toast_message">براہ کرم ایک کھلاڑی منتخب کریں</string>
+    <string name="add_player_toast_message">مزید کھلاڑی شامل کرنے کے لیے ترتیبات کھولیں</string>
+    <string name="max_lenght_name">نام کی زیادہ سے زیادہ لمبائی</string>
+    <string name="remove_player">کھلاڑی ہٹائیں</string>
+    <string name="game_empty_active_players_list">کوئی فعال کھلاڑی نہیں۔ براہ کرم ترتیبات میں کھلاڑی شامل کریں</string>
+    <string name="application_title">ایپلی کیشن</string>
+    <string name="application_description">یہ ایپ بورڈ گیم Munchkin کے لیے ایک سادہ اور ہلکا وزن طاقت کاؤنٹر ہے۔</string>
+    <string name="how_it_works_title">یہ کیسے کام کرتا ہے</string>
+    <string name="how_it_works_body">یہ کھلاڑیوں کو کھیل کے دوران کردار کی طاقت کا تیزی سے حساب لگانے اور ٹریک کرنے میں مدد کرتا ہے، تاکہ آپ ریاضی کے بجائے کھیل پر توجہ مرکوز کر سکیں۔
+ایپ مکمل طور پر آف لائن کام کرتی ہے، کوئی ذاتی ڈیٹا جمع نہیں کرتی، کوئی اشتہارات نہیں رکھتی، اور نیٹ ورک تک رسائی استعمال نہیں کرتی۔
+Munchkin کے ایک پرستار کے ذریعہ کیشول اور ٹیبل ٹاپ دوستانہ کھیل کے لیے ایک آسان ساتھی کے طور پر بنایا گیا ہے۔</string>
+    <string name="version_title">ورژن</string>
+    <string name="privacy_title">رازداری</string>
+    <string name="privacy_text">ہم ذاتی ڈیٹا جمع نہیں کرتے۔</string>
+    <string name="rate_app_title">Rate app</string>
+    <string name="rate_app_button">Rate this app</string>
+    <string name="game_empty_players_list">خالی ہے۔\nبراہ کرم کھلاڑی شامل کریں</string>
+    <string name="retry">دوبارہ کوشش کریں</string>
+    <string name="error_description">اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں</string>
+    <string name="dice">پانسہ</string>
+    <string name="throw_dice">پھینکیں 🎲</string>
+
+</resources>
+
