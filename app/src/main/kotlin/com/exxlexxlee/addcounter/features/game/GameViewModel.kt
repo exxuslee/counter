@@ -39,7 +39,7 @@ class GameViewModel(
                     viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
-                    playersUseCase.update(player.copy(current = player.current + 1))
+                    playersUseCase.save(player.copy(current = player.current + player.increment))
                 }
             }
 
@@ -49,7 +49,7 @@ class GameViewModel(
                     viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
-                    playersUseCase.update(player.copy(start = player.start + 1))
+                    playersUseCase.save(player.copy(start = player.start + player.increment))
                 }
             }
 
@@ -59,7 +59,7 @@ class GameViewModel(
                     viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
-                    playersUseCase.update(player.copy(current = player.current - 1))
+                    playersUseCase.save(player.copy(current = player.current - player.increment))
                 }
             }
 
@@ -69,22 +69,12 @@ class GameViewModel(
                     viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
-                    playersUseCase.update(player.copy(start = player.start - 1))
+                    playersUseCase.save(player.copy(start = player.start - player.increment))
                 }
             }
 
             is Event.SelectPlayer -> {
                 viewState = viewState.copy(selectedPlayerId = viewEvent.id)
-            }
-
-            is Event.SwitchSex -> {
-                viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.update(
-                        viewEvent.count.copy(
-                            reverseSex = !viewEvent.count.reverseSex
-                        )
-                    )
-                }
             }
 
             is Event.AddPlayer ->  {

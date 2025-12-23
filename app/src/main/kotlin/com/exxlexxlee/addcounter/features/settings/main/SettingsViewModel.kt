@@ -13,6 +13,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
+import java.math.BigDecimal
 
 class SettingsViewModel(
     private val themeController: ThemeController,
@@ -53,12 +54,8 @@ class SettingsViewModel(
             Event.ConfirmNewGame -> {
                 viewModelScope.launch(Dispatchers.IO) {
                     playersUseCase.counts.value.forEach { player ->
-                        val resetPlayer = player.copy(
-                            start = 1,
-                            current = 0,
-                            reverseSex = false,
-                        )
-                        playersUseCase.update(resetPlayer)
+                        val resetPlayer = player.copy(start = BigDecimal.ZERO,)
+                        playersUseCase.save(resetPlayer)
                     }
                     delay(500)
                     viewAction = Action.PopBack
@@ -76,7 +73,7 @@ class SettingsViewModel(
             }
 
             is Event.ActivatePlayer -> viewModelScope.launch(Dispatchers.IO) {
-                playersUseCase.update(viewEvent.count.copy(active = !viewEvent.count.active))
+                playersUseCase.save(viewEvent.count.copy(active = !viewEvent.count.active))
             }
 
             is Event.Reveal -> viewState = viewState.copy(revealedId = viewEvent.id)

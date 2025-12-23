@@ -39,10 +39,6 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
             Column(
                 modifier = Modifier.fillMaxSize(),
             ) {
-                Row {
-                    PlayerCard(modifier = Modifier.weight(1f), null)
-                    if (isLandscape) PlayerCard(modifier = Modifier.weight(1f), null)
-                }
 
                 if (gameViewState.allPlayers == 0) ScreenMessageWithAction(
                     text = stringResource(R.string.game_empty_players_list),
@@ -68,9 +64,8 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items(gameViewState.activeCounts) { player ->
-                        val icon = if (player.reverseSex) player.icon + 1 else player.icon
                         PlayerCard(
-                            iconRes = icon,
+                            iconRes = player.icon,
                             name = player.name,
                             level = player.start.toString(),
                             bonus = player.current.toString(),
@@ -82,7 +77,6 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                             },
                             onSelectIcon = {
                                 view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-                                eventHandler.invoke(Event.SwitchSex(player))
                             },
                         )
                     }

@@ -59,10 +59,8 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun MainContent(
     mainViewModel: MainViewModel = koinViewModel(),
-    gameViewModel: GameViewModel = koinViewModel(),
 ) {
     val mainViewState by mainViewModel.viewStates().collectAsState()
-    val gameViewState by gameViewModel.viewStates().collectAsState()
     val viewAction by mainViewModel.viewActions().collectAsState(null)
 
     val navController = rememberNavController()
@@ -74,16 +72,9 @@ fun MainContent(
         LocalNavController provides navController
     ) {
         if (isLandscape) {
-            LandscapeLayout(
-                currentRoute,
-                navController,
-                gameViewModel,
-                mainViewModel,
-                mainViewState,
-                gameViewState
-            )
+            LandscapeLayout(currentRoute, navController, mainViewModel, mainViewState,)
         } else {
-            PortraitLayout(currentRoute, navController, mainViewModel, mainViewState, gameViewModel)
+            PortraitLayout(currentRoute, navController, mainViewModel, mainViewState)
         }
 
         when (viewAction) {
@@ -100,7 +91,6 @@ private fun PortraitLayout(
     navController: NavHostController,
     viewModel: MainViewModel,
     viewState: ViewState,
-    gameViewModel: GameViewModel,
 ) {
     Scaffold(
         topBar = { MainTopBar(currentRoute, navController, viewModel) },
@@ -109,7 +99,6 @@ private fun PortraitLayout(
         NavHostContent(
             navController,
             viewState,
-            gameViewModel,
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
@@ -122,10 +111,8 @@ private fun PortraitLayout(
 private fun LandscapeLayout(
     currentRoute: Routes?,
     navController: NavHostController,
-    gameViewModel: GameViewModel,
     mainViewModel: MainViewModel,
     viewState: ViewState,
-    gameViewState: GameViewState,
 ) {
     Scaffold(
         containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(4.dp),
@@ -139,18 +126,11 @@ private fun LandscapeLayout(
                 containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(4.dp),
                 windowInsets = WindowInsets(),
             ) {
-                LandscapeNavigationButtons(
-                    currentRoute,
-                    navController,
-                    gameViewModel,
-                    mainViewModel,
-                    gameViewState
-                )
+                LandscapeNavigationButtons(currentRoute, navController, mainViewModel)
             }
             NavHostContent(
                 navController,
                 viewState,
-                gameViewModel,
                 modifier = Modifier
                     .fillMaxSize()
                     .background(MaterialTheme.colorScheme.surface)
@@ -215,9 +195,7 @@ private fun MainTopBar(
 private fun LandscapeNavigationButtons(
     currentRoute: Routes?,
     navController: NavHostController,
-    gameViewModel: GameViewModel,
     mainViewModel: MainViewModel,
-    gameViewState: GameViewState,
 ) {
     if (currentRoute?.isPrimaryRoute() == false) {
         IconButton(onClick = { navController.popBackStack() }) {
@@ -237,40 +215,12 @@ private fun LandscapeNavigationButtons(
             )
         }
     }
-    VSpacer(16.dp)
-    if (gameViewState.activeCounts.isNotEmpty() && currentRoute?.isPrimaryRoute() == true) listOf(
-        BottomButtonsItems.AddLevel,
-        BottomButtonsItems.SubLevel,
-        BottomButtonsItems.AddBonus,
-        BottomButtonsItems.SubBonus,
-    ).forEach { dest ->
-
-        IconButton(onClick = {
-            gameViewModel.obtainEvent(
-                when (dest) {
-                    BottomButtonsItems.AddLevel -> Event.AddLevel
-                    BottomButtonsItems.SubLevel -> Event.SubLevel
-                    BottomButtonsItems.AddBonus -> Event.AddBonus
-                    BottomButtonsItems.SubBonus -> Event.SubBonus
-                }
-            )
-        }) {
-            Icon(
-                painter = dest.icon(),
-                contentDescription = dest.label(),
-            )
-        }
-        VSpacer(4.dp)
-
-    }
-
 }
 
 @Composable
 private fun NavHostContent(
     navController: NavHostController,
     viewState: ViewState,
-    gameViewModel: GameViewModel,
     modifier: Modifier = Modifier
 ) {
     NavHost(
@@ -278,7 +228,7 @@ private fun NavHostContent(
         startDestination = viewState.initialRoute,
         modifier = modifier
     ) {
-        animatedComposable(Routes.GameRoute.route) { GameScreen(viewModel = gameViewModel) }
+        animatedComposable(Routes.GameRoute.route) { GameScreen() }
         animatedComposable(Routes.SettingsRoute.MainRoute.route) { SettingsScreen() }
         animatedComposable(
             Routes.SettingsRoute.ThermsRoute.route,
