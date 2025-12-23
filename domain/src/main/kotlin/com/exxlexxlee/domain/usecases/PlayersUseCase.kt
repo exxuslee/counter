@@ -1,34 +1,29 @@
 package com.exxlexxlee.domain.usecases
 
-import com.exxlexxlee.domain.model.Player
-import com.exxlexxlee.domain.repositories.PlayersRepository
+import com.exxlexxlee.domain.model.Count
+import com.exxlexxlee.domain.repositories.CountRepository
 import kotlinx.coroutines.flow.StateFlow
 
 interface PlayersUseCase {
 
-    val players: StateFlow<List<Player>>
-    val activePlayers: StateFlow<List<Player>>
-    suspend fun savePlayer(player: Player): Int
-    suspend fun updatePlayer(player: Player)
-    suspend fun deletePlayer(id: Int)
-    suspend fun player(id: Int): Player?
+    val counts: StateFlow<List<Count>>
+    val activeCounts: StateFlow<List<Count>>
+    suspend fun save(count: Count)
+    suspend fun delete(id: Int)
+    suspend fun count(id: Int): Count?
 
     class Base(
-        private val repository: PlayersRepository
+        private val repository: CountRepository
     ) : PlayersUseCase {
 
-        override val players: StateFlow<List<Player>> = repository.players
-        override val activePlayers: StateFlow<List<Player>> = repository.activePlayers
+        override val counts: StateFlow<List<Count>> = repository.counts
+        override val activeCounts: StateFlow<List<Count>> = repository.activeCounts
 
-        override suspend fun savePlayer(player: Player): Int = repository.savePlayer(player)
+        override suspend fun save(count: Count) = repository.save(count)
 
-        override suspend fun updatePlayer(player: Player) {
-            if (player.level > 0) repository.updatePlayer(player)
-        }
+        override suspend fun delete(id: Int) = repository.delete(id)
 
-        override suspend fun deletePlayer(id: Int) = repository.deletePlayer(id)
-
-        override suspend fun player(id: Int) = repository.player(id)
+        override suspend fun count(id: Int) = repository.count(id)
 
     }
 }

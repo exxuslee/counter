@@ -1,10 +1,10 @@
 package com.exxlexxlee.addcounter.features.game.models
 
-import com.exxlexxlee.domain.model.Player
+import com.exxlexxlee.domain.model.Count
 
 sealed class Event {
     data class SelectPlayer(val id: Int) : Event()
-    data class SwitchSex(val player: Player) : Event()
+    data class SwitchSex(val count: Count) : Event()
 
     object DialogAddPlayer : Event()
     data class AddPlayer(val name: String, val icon: Int) : Event()

@@ -105,7 +105,7 @@ fun SettingsView(
         }
 
         CellUniversalSection(
-            viewState.players.mapIndexed { index, player ->
+            viewState.counts.mapIndexed { index, player ->
                 {
                     RowUniversal(
                         horizontalArrangement = Arrangement.End,
@@ -154,7 +154,7 @@ fun SettingsView(
                                     eventHandler.invoke(Event.ActivatePlayer(player))
                                 },
                                 valueContent = {
-                                    if (player.playing) {
+                                    if (player.active) {
                                         Icon(
                                             painter = painterResource(R.drawable.outline_check_24),
                                             contentDescription = "",

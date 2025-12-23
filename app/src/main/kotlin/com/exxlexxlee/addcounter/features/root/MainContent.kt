@@ -238,7 +238,7 @@ private fun LandscapeNavigationButtons(
         }
     }
     VSpacer(16.dp)
-    if (gameViewState.activePlayers.isNotEmpty() && currentRoute?.isPrimaryRoute() == true) listOf(
+    if (gameViewState.activeCounts.isNotEmpty() && currentRoute?.isPrimaryRoute() == true) listOf(
         BottomButtonsItems.AddLevel,
         BottomButtonsItems.SubLevel,
         BottomButtonsItems.AddBonus,

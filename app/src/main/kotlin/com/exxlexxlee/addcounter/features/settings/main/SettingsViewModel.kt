@@ -1,7 +1,7 @@
 package com.exxlexxlee.addcounter.features.settings.main
 
 import androidx.lifecycle.viewModelScope
-import com.exxlexxlee.domain.model.Player
+import com.exxlexxlee.domain.model.Count
 import com.exxlexxlee.domain.usecases.PlayersUseCase
 import com.exxlexxlee.domain.usecases.SettingsUseCase
 import com.exxlexxlee.domain.usecases.ThemeController
@@ -27,12 +27,12 @@ class SettingsViewModel(
             combine(
                 themeController.isDark,
                 settingsUseCase.isTermsOfUseRead,
-                playersUseCase.players,
+                playersUseCase.counts,
             ) { isDark, isTermsOfUseRead, players ->
                 ViewState(
                     isTermsOfUseRead = isTermsOfUseRead,
                     isDark = isDark,
-                    players = players
+                    counts = players
                 )
             }.collect { newState ->
                 viewState = newState
@@ -52,13 +52,13 @@ class SettingsViewModel(
 
             Event.ConfirmNewGame -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.players.value.forEach { player ->
+                    playersUseCase.counts.value.forEach { player ->
                         val resetPlayer = player.copy(
-                            level = 1,
-                            bonus = 0,
+                            start = 1,
+                            current = 0,
                             reverseSex = false,
                         )
-                        playersUseCase.updatePlayer(resetPlayer)
+                        playersUseCase.update(resetPlayer)
                     }
                     delay(500)
                     viewAction = Action.PopBack
@@ -69,21 +69,21 @@ class SettingsViewModel(
 
             is Event.AddPlayer -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.savePlayer(Player(name = viewEvent.name, icon = viewEvent.icon))
+                    playersUseCase.save(Count(name = viewEvent.name, icon = viewEvent.icon))
                 }
                 clearAction()
 
             }
 
             is Event.ActivatePlayer -> viewModelScope.launch(Dispatchers.IO) {
-                playersUseCase.updatePlayer(viewEvent.player.copy(playing = !viewEvent.player.playing))
+                playersUseCase.update(viewEvent.count.copy(active = !viewEvent.count.active))
             }
 
             is Event.Reveal -> viewState = viewState.copy(revealedId = viewEvent.id)
 
             is Event.DeletePlayer -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.deletePlayer(viewEvent.id)
+                    playersUseCase.delete(viewEvent.id)
                 }
             }
         }

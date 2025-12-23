@@ -6,10 +6,10 @@ import androidx.room.Room
 import com.exxlexxlee.data.local.AppDatabase
 import com.exxlexxlee.data.remote.cmcap.CMCapService
 import com.exxlexxlee.data.remote.cmcap.api.CMCapServiceImpl
-import com.exxlexxlee.data.repositories.PlayersRepositoryImpl
+import com.exxlexxlee.data.repositories.CountRepositoryImpl
 import com.exxlexxlee.data.repositories.PriceRepositoryImpl
 import com.exxlexxlee.data.repositories.SettingsRepositoryImpl
-import com.exxlexxlee.domain.repositories.PlayersRepository
+import com.exxlexxlee.domain.repositories.CountRepository
 import com.exxlexxlee.domain.repositories.PriceRepository
 import com.exxlexxlee.domain.repositories.SettingsRepository
 import io.ktor.client.HttpClient
@@ -57,13 +57,13 @@ val dataModule = module {
             .fallbackToDestructiveMigration(false).build()
     }
 
-    single { get<AppDatabase>().playerDAO }
+    single { get<AppDatabase>().countDAO }
     single { get<AppDatabase>().tokensDAO }
 
     single<CMCapService> { CMCapServiceImpl(get()) }
 
     single<SettingsRepository> { SettingsRepositoryImpl(get()) }
-    single<PlayersRepository> { PlayersRepositoryImpl(get()) }
+    single<CountRepository> { CountRepositoryImpl(get()) }
     single<PriceRepository> { PriceRepositoryImpl(get(), get(), get()) }
 
 

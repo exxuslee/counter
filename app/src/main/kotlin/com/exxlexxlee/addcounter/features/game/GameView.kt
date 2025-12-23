@@ -55,7 +55,7 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                     }
                 }
 
-                if (gameViewState.activePlayers.isEmpty()) ListEmptyView(
+                if (gameViewState.activeCounts.isEmpty()) ListEmptyView(
                     text = stringResource(R.string.game_empty_active_players_list),
                     icon = R.drawable.outline_empty_dashboard_24,
                 )
@@ -67,14 +67,14 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    items(gameViewState.activePlayers) { player ->
+                    items(gameViewState.activeCounts) { player ->
                         val icon = if (player.reverseSex) player.icon + 1 else player.icon
                         PlayerCard(
                             iconRes = icon,
                             name = player.name,
-                            level = player.level.toString(),
-                            bonus = player.bonus.toString(),
-                            life = (player.level + player.bonus).toString(),
+                            level = player.start.toString(),
+                            bonus = player.current.toString(),
+                            life = (player.start + player.current).toString(),
                             selected = player.id == gameViewState.selectedPlayerId,
                             onSelectRow = {
                                 view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
