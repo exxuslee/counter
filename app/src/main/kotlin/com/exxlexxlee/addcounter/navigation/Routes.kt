@@ -14,7 +14,7 @@ sealed class Routes(
 
     data object GameRoute : Routes(
         "game",
-        label = { stringResource(R.string.munchkin_counter) },
+        label = { stringResource(R.string.counter) },
         icon = { painterResource(R.drawable.ic_baseline_sentiment_satisfied_alt_24) },
     )
 

@@ -49,7 +49,7 @@
     <string name="terms_section_11_content">Si vous avez des questions ou des commentaires concernant ces conditions d\'utilisation, vous pouvez contacter le développeur via la plateforme où l\'application est distribuée.</string>
     <string name="terms_footer">En utilisant Simple Munchkin Counter, vous reconnaissez avoir lu, compris et accepté d\'être lié par ces conditions d\'utilisation.</string>
     <string name="terms_accept_button">Accepter les conditions</string>
-    <string name="munchkin_counter">Compteur Munchkin</string>
+    <string name="counter">Compteur Munchkin</string>
     <string name="new_game_title">Nouvelle partie</string>
     <string name="new_game_message">Êtes-vous sûr de vouloir commencer une nouvelle partie ?</string>
     <string name="confirm">Confirmer</string>

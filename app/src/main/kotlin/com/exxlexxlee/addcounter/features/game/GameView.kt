@@ -5,7 +5,6 @@ import android.view.HapticFeedbackConstants
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -57,35 +56,23 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                 )
 
                 LazyVerticalGrid(
-                    columns = GridCells.Fixed(if (isLandscape) 2 else 1),
+                    columns = GridCells.Fixed(if (isLandscape) 3 else 2),
                     modifier = Modifier.weight(1f),
                     contentPadding = PaddingValues(vertical = 8.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items(gameViewState.activeCounts) { player ->
-                        PlayerCard(
+                        CountCard(
                             iconRes = player.icon,
                             name = player.name,
-                            level = player.start.toString(),
-                            bonus = player.current.toString(),
-                            life = (player.start + player.current).toString(),
-                            selected = player.id == gameViewState.selectedPlayerId,
-                            onSelectRow = {
-                                view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-                                eventHandler.invoke(Event.SelectPlayer(player.id))
-                            },
-                            onSelectIcon = {
-                                view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-                            },
-                        )
+                            onAddPhoto = {}
+                        ) {
+
+                        }
                     }
                 }
 
-                if (!isLandscape) BottomNavigationBar { event ->
-                    view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-                    eventHandler(event)
-                }
             }
         }
 

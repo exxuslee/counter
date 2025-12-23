@@ -49,7 +49,7 @@
     <string name="terms_section_11_content">如果您对这些使用条款有疑问或反馈，可以通过分发应用程序的平台联系开发者。</string>
     <string name="terms_footer">使用《Simple Munchkin Counter》，即表示您已阅读、理解并同意受这些使用条款的约束。</string>
     <string name="terms_accept_button">接受条款</string>
-    <string name="munchkin_counter">Munchkin计数器</string>
+    <string name="counter">Munchkin计数器</string>
     <string name="new_game_title">新游戏</string>
     <string name="new_game_message">您确定要开始新游戏吗？</string>
     <string name="confirm">确认</string>

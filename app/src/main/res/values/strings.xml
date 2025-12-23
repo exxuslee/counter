@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Counter</string>
-    <string name="name_icon" translatable="false">\t\t📛</string>
+    <string name="count_name" translatable="false">\t\t📛</string>
     <string name="level" translatable="false">🥇</string>
     <string name="bonus" translatable="false">😎</string>
     <string name="life" translatable="false">⚔️</string>
@@ -54,7 +54,7 @@
     <string name="terms_section_11_content">If you have questions or feedback regarding these Terms of Use, you may contact the developer through the platform where the application is distributed.</string>
     <string name="terms_footer">By using Simple Munchkin Counter, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</string>
     <string name="terms_accept_button">Terms accept</string>
-    <string name="munchkin_counter">Munchkin counter</string>
+    <string name="counter">Counter</string>
     <string name="new_game_title">New game</string>
     <string name="new_game_message">Are you sure you want to start a new game?</string>
     <string name="confirm">Confirm</string>

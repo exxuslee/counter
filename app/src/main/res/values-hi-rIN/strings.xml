@@ -49,7 +49,7 @@
     <string name="terms_section_11_content">यदि इन उपयोग की शर्तों के बारे में आपके कोई प्रश्न या प्रतिक्रिया है, तो आप उस प्लेटफ़ॉर्म के माध्यम से डेवलपर से संपर्क कर सकते हैं जहां एप्लिकेशन वितरित किया जाता है।</string>
     <string name="terms_footer">Simple Munchkin Counter का उपयोग करके, आप स्वीकार करते हैं कि आपने इन उपयोग की शर्तों को पढ़ा, समझा और इनसे बाध्य होने के लिए सहमत हैं।</string>
     <string name="terms_accept_button">शर्तें स्वीकार करें</string>
-    <string name="munchkin_counter">Munchkin काउंटर</string>
+    <string name="counter">Munchkin काउंटर</string>
     <string name="new_game_title">नया खेल</string>
     <string name="new_game_message">क्या आप वाकई एक नया खेल शुरू करना चाहते हैं?</string>
     <string name="confirm">पुष्टि करें</string>

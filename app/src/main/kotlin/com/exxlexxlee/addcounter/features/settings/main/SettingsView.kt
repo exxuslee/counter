@@ -51,7 +51,7 @@ fun SettingsView(
         VSpacer(24.dp)
         CellUniversalSection {
             Text(
-                text = stringResource(R.string.munchkin_counter),
+                text = stringResource(R.string.counter),
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.secondary,
             )

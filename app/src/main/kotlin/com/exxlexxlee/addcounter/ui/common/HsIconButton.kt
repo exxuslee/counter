@@ -52,5 +52,5 @@ fun HsIconButton(
     }
 }
 
-private val RippleRadius = 24.dp
+val RippleRadius = 24.dp
 private const val DisabledAlpha = 0.38f

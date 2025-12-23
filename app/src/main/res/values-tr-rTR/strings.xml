@@ -49,7 +49,7 @@
     <string name="terms_section_11_content">Bu Kullanım Koşulları hakkında sorularınız veya geri bildiriminiz varsa, uygulamanın dağıtıldığı platform aracılığıyla geliştiriciye ulaşabilirsiniz.</string>
     <string name="terms_footer">Simple Munchkin Counter\'ı kullanarak, bu Kullanım Koşullarını okuduğunuzu, anladığınızı ve bunlara bağlı olmayı kabul ettiğinizi kabul edersiniz.</string>
     <string name="terms_accept_button">Koşulları kabul et</string>
-    <string name="munchkin_counter">Munchkin sayacı</string>
+    <string name="counter">Munchkin sayacı</string>
     <string name="new_game_title">Yeni oyun</string>
     <string name="new_game_message">Yeni bir oyun başlatmak istediğinizden emin misiniz?</string>
     <string name="confirm">Onayla</string>

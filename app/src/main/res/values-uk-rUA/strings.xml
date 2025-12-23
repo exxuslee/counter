@@ -49,7 +49,7 @@
     <string name="terms_section_11_content">Якщо у вас є питання або відгуки щодо цих Умов використання, ви можете зв\'язатися з розробником через платформу, на якій поширюється додаток.</string>
     <string name="terms_footer">Використовуючи Simple Munchkin Counter, ви підтверджуєте, що прочитали, зрозуміли і погоджуєтесь з цими Умовами використання.</string>
     <string name="terms_accept_button">Прийняти умови</string>
-    <string name="munchkin_counter">Лічильник Munchkin</string>
+    <string name="counter">Лічильник Munchkin</string>
     <string name="new_game_title">Нова гра</string>
     <string name="new_game_message">Ви впевнені, що хочете почати нову гру?</string>
     <string name="confirm">Підтвердити</string>

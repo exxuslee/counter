@@ -170,8 +170,8 @@ private fun MainTopBar(
                     viewModel.obtainEvent(MainEvent.Dice)
                 }) {
                     Icon(
-                        painterResource(id = R.drawable.outline_dice_5_24),
-                        contentDescription = stringResource(R.string.dice)
+                        painterResource(id = R.drawable.outline_person_add_24),
+                        contentDescription = stringResource(R.string.add_player)
                     )
                 }
                 IconButton(onClick = {
@@ -217,34 +217,3 @@ private fun LandscapeNavigationButtons(
     }
 }
 
-@Composable
-private fun NavHostContent(
-    navController: NavHostController,
-    viewState: ViewState,
-    modifier: Modifier = Modifier
-) {
-    NavHost(
-        navController = navController,
-        startDestination = viewState.initialRoute,
-        modifier = modifier
-    ) {
-        animatedComposable(Routes.GameRoute.route) { GameScreen() }
-        animatedComposable(Routes.SettingsRoute.MainRoute.route) { SettingsScreen() }
-        animatedComposable(
-            Routes.SettingsRoute.ThermsRoute.route,
-            animationType = AnimationType.FADE
-        ) { TermsScreen() }
-        animatedComposable(
-            Routes.SettingsRoute.LanguageRoute.route,
-            animationType = AnimationType.FADE
-        ) { LanguageScreen() }
-        animatedComposable(
-            Routes.SettingsRoute.AboutRoute.route,
-            animationType = AnimationType.FADE
-        ) { AboutScreen() }
-        animatedComposable(
-            Routes.SettingsRoute.DonateRoute.route,
-            animationType = AnimationType.FADE
-        ) { DonateScreen() }
-    }
-}
