@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Counter</string>
-    <string name="count_name" translatable="false">\t\t📛</string>
     <string name="level" translatable="false">🥇</string>
     <string name="bonus" translatable="false">😎</string>
     <string name="life" translatable="false">⚔️</string>

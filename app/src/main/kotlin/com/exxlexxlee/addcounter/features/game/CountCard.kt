@@ -26,7 +26,6 @@ import androidx.compose.ui.zIndex
 import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.addcounter.ui.common.Icons
 import com.exxlexxlee.addcounter.ui.common.RippleRadius
-import com.exxlexxlee.addcounter.ui.common.VSpacer
 import com.exxlexxlee.addcounter.ui.theme.AppTheme
 
 
@@ -34,7 +33,7 @@ import com.exxlexxlee.addcounter.ui.theme.AppTheme
 fun CountCard(
     modifier: Modifier = Modifier,
     @DrawableRes iconRes: Int?,
-    name: String = stringResource(R.string.count_name),
+    name: String,
     current: String = "0",
     color: Color = MaterialTheme.colorScheme.surfaceContainer,
     photos: List<Int> = emptyList(),
@@ -118,12 +117,6 @@ fun CountCard(
                     }
 
                     Text(
-                        text = name,
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.SemiBold,
-                    )
-
-                    Text(
                         text = current,
                         style = MaterialTheme.typography.displayLarge,
                         fontWeight = FontWeight.Bold,
@@ -132,97 +125,60 @@ fun CountCard(
 
                 }
 
-                VSpacer(12.dp)
-
                 Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    photos.take(4).forEachIndexed { index, photoId ->
-                        Box(
-                            modifier = Modifier
-                                .offset(x = (-8 * index).dp)
-                                .zIndex((4 - index).toFloat())
-                        ) {
-                            Surface(
-                                shape = CircleShape,
-                                color = Color.White,
-                                modifier = Modifier.size(48.dp),
-                                border = BorderStroke(2.dp, Color.White)
-                            ) {
-                                Image(
-                                    painter = painterResource(id = photoId),
-                                    contentDescription = "Photo ${index + 1}",
-                                    contentScale = ContentScale.Crop,
-                                    modifier = Modifier.fillMaxSize()
-                                )
-                            }
-                        }
-                    }
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
 
-                    if (photos.size > 4) {
                         Box(
                             modifier = Modifier
-                                .offset(x = (-8 * 4).dp)
-                                .zIndex(0f)
+                                .offset(
+                                    x = if (photos.isEmpty()) 0.dp
+                                    else (-8 * minOf(photos.size, 4)).dp
+                                )
+                                .zIndex(-1f)
                         ) {
                             Surface(
                                 shape = CircleShape,
-                                color = Color.White.copy(alpha = 0.3f),
-                                modifier = Modifier.size(48.dp),
-                                border = BorderStroke(2.dp, Color.White)
+                                color = Color.White.copy(alpha = 0.2f),
+                                modifier = Modifier
+                                    .size(48.dp)
+                                    .clickable(
+                                        interactionSource = remember { MutableInteractionSource() },
+                                        indication = ripple(
+                                            radius = RippleRadius,
+                                            bounded = false,
+                                        )
+                                    ) {
+                                        onAddPhoto()
+                                    },
+                                border = BorderStroke(2.dp, Color.White.copy(alpha = 0.5f))
                             ) {
                                 Box(
                                     contentAlignment = Alignment.Center,
                                     modifier = Modifier.fillMaxSize()
                                 ) {
-                                    Text(
-                                        text = "+${photos.size - 4}",
-                                        style = MaterialTheme.typography.labelMedium,
-                                        fontWeight = FontWeight.SemiBold,
+                                    Icon(
+                                        imageVector = ImageVector.vectorResource(R.drawable.outline_person_remove_24),
+                                        contentDescription = "Add photo",
+                                        modifier = Modifier.size(20.dp)
                                     )
                                 }
                             }
                         }
                     }
 
-                    Box(
-                        modifier = Modifier
-                            .offset(
-                                x = if (photos.isEmpty()) 0.dp
-                                else (-8 * minOf(photos.size, 4)).dp
-                            )
-                            .zIndex(-1f)
-                    ) {
-                        Surface(
-                            shape = CircleShape,
-                            color = Color.White.copy(alpha = 0.2f),
-                            modifier = Modifier
-                                .size(48.dp)
-                                .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = ripple(
-                                        radius = RippleRadius,
-                                        bounded = false,
-                                    )
-                                ) {
-                                    onAddPhoto()
-                                },
-                            border = BorderStroke(2.dp, Color.White.copy(alpha = 0.5f))
-                        ) {
-                            Box(
-                                contentAlignment = Alignment.Center,
-                                modifier = Modifier.fillMaxSize()
-                            ) {
-                                Icon(
-                                    imageVector = ImageVector.vectorResource(R.drawable.outline_person_add_24),
-                                    contentDescription = "Add photo",
-                                    modifier = Modifier.size(20.dp)
-                                )
-                            }
-                        }
-                    }
+                    Text(
+                        text = name,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.SemiBold,
+                    )
                 }
+
             }
 
             Box(
@@ -257,7 +213,7 @@ fun CountCard(
 @Composable
 fun CountCard_Preview() {
     AppTheme {
-        CountCard(iconRes = null, onAddPhoto = {}) {
+        CountCard(iconRes = null, name = "Label", onAddPhoto = {}) {
 
         }
     }
