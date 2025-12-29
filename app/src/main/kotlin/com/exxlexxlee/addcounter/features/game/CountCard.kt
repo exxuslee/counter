@@ -32,7 +32,7 @@ import com.exxlexxlee.addcounter.ui.theme.AppTheme
 @Composable
 fun CountCard(
     modifier: Modifier = Modifier,
-    @DrawableRes iconRes: Int?,
+    @DrawableRes iconRes: Int,
     name: String,
     current: String = "0",
     color: Color = MaterialTheme.colorScheme.surfaceContainer,
@@ -40,7 +40,6 @@ fun CountCard(
     onAddPhoto: () -> Unit,
     onClick: () -> Unit,
 ) {
-    val icon = painterResource(iconRes?.let { Icons.icon(it) } ?: R.drawable.sex)
 
     var scale by remember { mutableFloatStateOf(1f) }
     val animatedScale by animateFloatAsState(
@@ -108,9 +107,8 @@ fun CountCard(
                             modifier = Modifier.fillMaxSize()
                         ) {
                             Icon(
-                                painter = icon,
+                                painter = painterResource(Icons.icon(iconRes)),
                                 contentDescription = null,
-                                tint = Color.White,
                                 modifier = Modifier.size(32.dp)
                             )
                         }
@@ -190,7 +188,7 @@ fun CountCard(
 @Composable
 fun CountCard_Preview() {
     AppTheme {
-        CountCard(iconRes = null, name = "Label", onAddPhoto = {}) {
+        CountCard(iconRes = R.drawable.outline_local_cafe_24, name = "Label", onAddPhoto = {}) {
 
         }
     }

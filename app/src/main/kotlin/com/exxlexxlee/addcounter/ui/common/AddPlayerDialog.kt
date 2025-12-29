@@ -84,7 +84,7 @@ fun AddPlayerDialog(
                                 expanded = expanded,
                                 onDismissRequest = { expanded = false }
                             ) {
-                                Icons.start.forEachIndexed { index, icon ->
+                                Icons.all.forEachIndexed { index, icon ->
                                     DropdownMenuItem(
                                         text = {
                                             Image(

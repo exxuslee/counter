@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer-array name="icons">
-        <item>@drawable/icon_0002</item>
-        <item>@drawable/icon_0004</item>
-        <item>@drawable/icon_0008</item>
-        <item>@drawable/icon_0001</item>
-        <item>@drawable/icon_0003</item>
-        <item>@drawable/icon_0007</item>
-    </integer-array>
     <string-array name="icons_string">
         <item>man</item>
         <item>man</item>
