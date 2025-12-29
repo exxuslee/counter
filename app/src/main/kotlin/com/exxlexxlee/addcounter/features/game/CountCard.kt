@@ -181,29 +181,6 @@ fun CountCard(
 
             }
 
-            Box(
-                modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .offset(x = 16.dp, y = (-16).dp)
-                    .size(80.dp)
-                    .background(
-                        color = Color.White.copy(alpha = 0.1f),
-                        shape = CircleShape
-                    )
-                    .blur(40.dp)
-            )
-
-            Box(
-                modifier = Modifier
-                    .align(Alignment.BottomStart)
-                    .offset(x = (-16).dp, y = 16.dp)
-                    .size(64.dp)
-                    .background(
-                        color = Color.White.copy(alpha = 0.1f),
-                        shape = CircleShape
-                    )
-                    .blur(30.dp)
-            )
         }
     }
 }
