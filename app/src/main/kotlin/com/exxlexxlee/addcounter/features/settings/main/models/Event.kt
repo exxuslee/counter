@@ -7,7 +7,7 @@ sealed class Event {
     object ConfirmNewGame : Event()
     object DialogNewGame : Event()
     object DialogAddPlayer : Event()
-    data class AddPlayer(val name: String, val icon: Int) : Event()
+    data class AddCount(val count: Count) : Event()
     data class ActivatePlayer(val count: Count) : Event()
     data class Reveal(val id: Int) : Event()
     data class DeletePlayer(val id: Int) : Event()

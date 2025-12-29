@@ -39,12 +39,8 @@ fun GameScreen(
                 onDismissRequest = {
                     viewModel.clearAction()
                 },
-                onAdd = { name, iconId, colorId ->
-                    viewModel.obtainEvent(Event.AddPlayer(
-                        name = name,
-                        icon = iconId,
-                        colorId = colorId,
-                    ))
+                onAdd = { count ->
+                    viewModel.obtainEvent(Event.AddCount(count))
                 }
             )
         }

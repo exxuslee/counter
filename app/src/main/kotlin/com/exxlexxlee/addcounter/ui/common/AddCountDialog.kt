@@ -28,17 +28,23 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.exxlexxlee.addcounter.R
+import com.exxlexxlee.domain.model.Count
+import com.exxlexxlee.domain.model.Operator
 import kotlin.random.Random
+import java.math.BigDecimal
 
 
 @Composable
 fun AddCountDialog(
     onDismissRequest: () -> Unit,
-    onAdd: (String, Int, Int) -> Unit,
+    onAdd: (Count) -> Unit,
 ) {
     var selectedIcon by remember { mutableIntStateOf(Random.nextInt(Icons.all.size)) }
     var selectedColor by remember { mutableIntStateOf(0) }
     var name by remember { mutableStateOf("") }
+    var start by remember { mutableStateOf("0") }
+    var increment by remember { mutableStateOf("1") }
+    var selectedOperator by remember { mutableStateOf(Operator.ADD) }
 
     AlertDialog(
         onDismissRequest = onDismissRequest,
@@ -64,6 +70,7 @@ fun AddCountDialog(
 
                 var expandedIcon by remember { mutableStateOf(false) }
                 var expandedColor by remember { mutableStateOf(false) }
+                var expandedOperator by remember { mutableStateOf(false) }
                 val localContext = LocalContext.current
                 val text = stringResource(R.string.max_lenght_name)
                 OutlinedTextField(
@@ -142,13 +149,89 @@ fun AddCountDialog(
                     placeholder = { Text(stringResource(R.string.input_name)) },
                     singleLine = true,
                 )
+                VSpacer(16.dp)
+
+                OutlinedTextField(
+                    value = start,
+                    onValueChange = { newValue ->
+                        if (newValue.isEmpty() || newValue.matches(Regex("-?\\d*\\.?\\d*"))) {
+                            start = newValue
+                        }
+                    },
+                    label = { Text("Start") },
+                    placeholder = { Text("0") },
+                    singleLine = true,
+                )
+                VSpacer(16.dp)
+
+                OutlinedTextField(
+                    value = increment,
+                    onValueChange = { newValue ->
+                        if (newValue.isEmpty() || newValue.matches(Regex("-?\\d*\\.?\\d*"))) {
+                            increment = newValue
+                        }
+                    },
+                    label = { Text("Increment") },
+                    placeholder = { Text("1") },
+                    singleLine = true,
+                    leadingIcon = {
+                        Box {
+                            Image(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .clickable(
+                                        onClick = { expandedOperator = true }
+                                    ),
+                                painter = painterResource(id = selectedOperator.res),
+                                contentDescription = stringResource(R.string.select_icon)
+                            )
+                            DropdownMenu(
+                                expanded = expandedOperator,
+                                onDismissRequest = { expandedOperator = false }
+                            ) {
+                                Operator.entries.forEach { operator ->
+                                    DropdownMenuItem(
+                                        text = {
+                                            Image(
+                                            painter = painterResource(id = operator.res),
+                                            modifier = Modifier.size(36.dp),
+                                            contentDescription = stringResource(R.string.select_icon)
+                                        ) },
+                                        onClick = {
+                                            selectedOperator = operator
+                                            expandedOperator = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    },
+                )
             }
 
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    onAdd.invoke(name, selectedIcon, selectedColor)
+                    val startValue = try {
+                        if (start.isEmpty()) BigDecimal.ZERO else BigDecimal(start)
+                    } catch (e: NumberFormatException) {
+                        BigDecimal.ZERO
+                    }
+                    val incrementValue = try {
+                        if (increment.isEmpty()) BigDecimal.ONE else BigDecimal(increment)
+                    } catch (e: NumberFormatException) {
+                        BigDecimal.ONE
+                    }
+                    onAdd.invoke(Count(
+                        name = name,
+                        start = startValue,
+                        current = startValue,
+                        increment = incrementValue,
+                        operator = selectedOperator,
+                        icon = selectedIcon,
+                        color = selectedColor,
+                    ))
                 }
             ) {
                 Text(

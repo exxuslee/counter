@@ -64,9 +64,9 @@ class SettingsViewModel(
 
             Event.DialogAddPlayer -> viewAction = Action.AddPlayer
 
-            is Event.AddPlayer -> {
+            is Event.AddCount -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.save(Count(name = viewEvent.name, icon = viewEvent.icon))
+                    playersUseCase.save(viewEvent.count)
                 }
                 clearAction()
 

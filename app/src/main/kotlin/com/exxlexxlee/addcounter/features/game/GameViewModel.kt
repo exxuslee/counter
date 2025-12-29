@@ -82,15 +82,9 @@ class GameViewModel(
                 viewState = viewState.copy(selectedPlayerId = viewEvent.id)
             }
 
-            is Event.AddPlayer -> {
+            is Event.AddCount -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.save(
-                        Count(
-                            name = viewEvent.name,
-                            icon = viewEvent.icon,
-                            color = viewEvent.colorId
-                        )
-                    )
+                    playersUseCase.save(viewEvent.count)
                 }
                 viewAction = Action.ShowSelectPlayerMessage(R.string.add_player_toast_message)
             }

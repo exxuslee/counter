@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.addcounter.features.settings.main.models.Action
 import com.exxlexxlee.addcounter.features.settings.main.models.Event
-import com.exxlexxlee.addcounter.features.settings.main.models.Event.AddPlayer
+import com.exxlexxlee.addcounter.features.settings.main.models.Event.AddCount
 import com.exxlexxlee.addcounter.ui.common.AddCountDialog
 import com.exxlexxlee.addcounter.ui.common.HSpacer
 import com.exxlexxlee.addcounter.ui.common.LocalNavController
@@ -81,11 +81,7 @@ fun SettingsScreen(
             onDismissRequest = {
                 viewModel.clearAction()
             },
-            onAdd = { name, iconId, colorId ->
-                viewModel.obtainEvent(
-                    AddPlayer(name = name, icon = iconId)
-                )
-            }
+            onAdd = { count -> viewModel.obtainEvent(AddCount(count)) }
         )
 
         Action.PopBack -> {
