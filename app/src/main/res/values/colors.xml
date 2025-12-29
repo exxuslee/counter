@@ -15,20 +15,27 @@
     <color name="window_background">#0B0C0D</color>
     <color name="navigation_Bar">#0B0C0D</color>
 
-    <color name="bg_1">#FF0B0F1A</color>
-    <color name="main_1">#FF00E5FF</color>
-    <color name="bg_2">#FF111111</color>
-    <color name="main_2">#FFFFFFFF</color>
-    <color name="bg_3">#FF0F172A</color>
-    <color name="main_3">#FF38BDF8</color>
+    <color name="bg_1">#FF111111</color>
+    <color name="main_1">#FFFFFFFF</color>
+
+    <color name="bg_2">#FF0B0F1A</color>
+    <color name="main_2">#FF00E5FF</color>
+
+    <color name="bg_3">#FF1C1917</color>
+    <color name="main_3">#FFFBBF24</color>
+
     <color name="bg_4">#FF1A1A1A</color>
     <color name="main_4">#FFA855F7</color>
+
     <color name="bg_5">#FFF5F7FA</color>
     <color name="main_5">#FF111827</color>
-    <color name="bg_6">#FF020617</color>
-    <color name="main_6">#FF22D3EE</color>
-    <color name="bg_7">#FF18181B</color>
-    <color name="main_7">#FFFACC15</color>
+
+    <color name="bg_6">#FF2F1D38</color>
+    <color name="main_6">#FFEC4899</color>
+
+    <color name="bg_7">#FF292524</color>
+    <color name="main_7">#FFFB923C</color>
+
     <color name="bg_8">#FFFAFAFA</color>
     <color name="main_8">#FF2563EB</color>
 
