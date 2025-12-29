@@ -25,15 +25,6 @@ fun GameScreen(
 
     when (viewAction) {
 
-        is Action.ShowSelectPlayerMessage -> {
-            Toast.makeText(
-                LocalContext.current,
-                stringResource((viewAction as Action.ShowSelectPlayerMessage).messageResId),
-                Toast.LENGTH_SHORT
-            ).show()
-            viewModel.clearAction()
-        }
-
         Action.AddPlayer -> {
             AddCountDialog(
                 onDismissRequest = {

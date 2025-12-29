@@ -1,7 +1,6 @@
 package com.exxlexxlee.addcounter.features.game
 
 import android.content.res.Configuration
-import android.view.HapticFeedbackConstants
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -17,13 +16,12 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.exxlexxlee.domain.model.UiState
+import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.addcounter.features.game.models.Event
 import com.exxlexxlee.addcounter.features.game.models.GameViewState
-import com.exxlexxlee.addcounter.navigation.BottomNavigationBar
 import com.exxlexxlee.addcounter.ui.common.ListEmptyView
 import com.exxlexxlee.addcounter.ui.common.ScreenMessageWithAction
-import com.exxlexxlee.addcounter.R
+import com.exxlexxlee.domain.model.UiState
 
 @Composable
 fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
@@ -62,14 +60,14 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    items(gameViewState.activeCounts) { player ->
+                    items(gameViewState.activeCounts) { count ->
                         CountCard(
-                            iconRes = player.icon,
-                            name = player.name,
-                            onAddPhoto = {}
-                        ) {
-
-                        }
+                            iconRes = count.icon,
+                            name = count.name,
+                            current = count.current.toString(),
+                            onClick = { eventHandler.invoke(Event.Increment(count)) },
+                            onDecrement = { eventHandler.invoke(Event.Decrement(count)) },
+                        )
                     }
                 }
 

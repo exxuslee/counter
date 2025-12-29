@@ -7,8 +7,6 @@ sealed class Event {
 
     object DialogAddPlayer : Event()
     data class AddCount(val count: Count) : Event()
-    data object AddLevel : Event()
-    data object SubLevel : Event()
-    data object AddBonus : Event()
-    data object SubBonus : Event()
+    data class Increment(val count: Count) : Event()
+    data class Decrement(val count: Count) : Event()
 }

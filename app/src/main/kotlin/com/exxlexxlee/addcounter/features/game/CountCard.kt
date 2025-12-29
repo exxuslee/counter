@@ -15,9 +15,7 @@ import androidx.compose.ui.draw.*
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -36,9 +34,8 @@ fun CountCard(
     name: String,
     current: String = "0",
     color: Color = MaterialTheme.colorScheme.surfaceContainer,
-    photos: List<Int> = emptyList(),
-    onAddPhoto: () -> Unit,
     onClick: () -> Unit,
+    onDecrement: () -> Unit,
 ) {
 
     var scale by remember { mutableFloatStateOf(1f) }
@@ -55,19 +52,15 @@ fun CountCard(
             .fillMaxWidth()
             .padding(horizontal = 8.dp)
             .scale(animatedScale)
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) {
-                scale = 0.95f
-                onClick()
-            }
-            .pointerInput(Unit) {
+            .pointerInput(onClick) {
                 detectTapGestures(
                     onPress = {
                         scale = 0.95f
                         tryAwaitRelease()
                         scale = 1f
+                    },
+                    onTap = {
+                        onClick()
                     }
                 )
             },
@@ -133,12 +126,7 @@ fun CountCard(
                     ) {
 
                         Box(
-                            modifier = Modifier
-                                .offset(
-                                    x = if (photos.isEmpty()) 0.dp
-                                    else (-8 * minOf(photos.size, 4)).dp
-                                )
-                                .zIndex(-1f)
+                            modifier = Modifier.zIndex(-1f)
                         ) {
                             Surface(
                                 shape = CircleShape,
@@ -152,7 +140,7 @@ fun CountCard(
                                             bounded = false,
                                         )
                                     ) {
-                                        onAddPhoto()
+                                        onDecrement()
                                     },
                                 border = BorderStroke(2.dp, Color.White.copy(alpha = 0.5f))
                             ) {
@@ -188,7 +176,9 @@ fun CountCard(
 @Composable
 fun CountCard_Preview() {
     AppTheme {
-        CountCard(iconRes = R.drawable.outline_local_cafe_24, name = "Label", onAddPhoto = {}) {
+        CountCard(
+            iconRes = R.drawable.outline_local_cafe_24, name = "Label", onClick = {}
+        ) {
 
         }
     }
