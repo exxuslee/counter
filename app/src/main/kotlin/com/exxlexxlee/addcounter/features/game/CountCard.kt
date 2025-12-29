@@ -22,6 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 import androidx.compose.ui.zIndex
 import com.exxlexxlee.addcounter.R
+import com.exxlexxlee.addcounter.ui.common.HSpacer
 import com.exxlexxlee.addcounter.ui.common.Icons
 import com.exxlexxlee.addcounter.ui.common.RippleRadius
 import com.exxlexxlee.addcounter.ui.theme.AppTheme
@@ -33,7 +34,8 @@ fun CountCard(
     @DrawableRes iconRes: Int,
     name: String,
     current: String = "0",
-    color: Color = MaterialTheme.colorScheme.surfaceContainer,
+    background: Color = MaterialTheme.colorScheme.surfaceContainer,
+    tint: Color = MaterialTheme.colorScheme.surfaceVariant,
     onClick: () -> Unit,
     onDecrement: () -> Unit,
 ) {
@@ -64,8 +66,7 @@ fun CountCard(
                     }
                 )
             },
-        shape = RoundedCornerShape(24.dp),
-        colors = CardDefaults.cardColors(containerColor = color),
+        shape = RoundedCornerShape(20.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
         Box(
@@ -74,8 +75,8 @@ fun CountCard(
                 .background(
                     brush = Brush.linearGradient(
                         colors = listOf(
-                            color,
-                            color.copy(alpha = 0.8f)
+                            background,
+                            background.copy(alpha = 0.8f)
                         )
                     )
                 )
@@ -93,7 +94,7 @@ fun CountCard(
                     Surface(
                         shape = RoundedCornerShape(16.dp),
                         color = Color.White.copy(alpha = 0.2f),
-                        modifier = Modifier.size(56.dp)
+                        modifier = Modifier.size(48.dp)
                     ) {
                         Box(
                             contentAlignment = Alignment.Center,
@@ -102,7 +103,8 @@ fun CountCard(
                             Icon(
                                 painter = painterResource(Icons.icon(iconRes)),
                                 contentDescription = null,
-                                modifier = Modifier.size(32.dp)
+                                modifier = Modifier.size(32.dp),
+                                tint = tint,
                             )
                         }
                     }
@@ -111,8 +113,11 @@ fun CountCard(
                         text = current,
                         style = MaterialTheme.typography.displayLarge,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 48.sp
+                        fontSize = 48.sp,
+                        color = tint,
                     )
+
+                    HSpacer(0.dp)
 
                 }
 
@@ -130,7 +135,7 @@ fun CountCard(
                         ) {
                             Surface(
                                 shape = CircleShape,
-                                color = Color.White.copy(alpha = 0.2f),
+                                color = background.copy(alpha = 0.8f).compositeOver(tint),
                                 modifier = Modifier
                                     .size(48.dp)
                                     .clickable(
@@ -142,16 +147,17 @@ fun CountCard(
                                     ) {
                                         onDecrement()
                                     },
-                                border = BorderStroke(2.dp, Color.White.copy(alpha = 0.5f))
+                                border = BorderStroke(1.dp, tint.copy(alpha = 0.5f))
                             ) {
                                 Box(
                                     contentAlignment = Alignment.Center,
                                     modifier = Modifier.fillMaxSize()
                                 ) {
                                     Icon(
-                                        imageVector = ImageVector.vectorResource(R.drawable.outline_person_remove_24),
+                                        imageVector = ImageVector.vectorResource(R.drawable.outline_undo_24),
                                         contentDescription = "Add photo",
-                                        modifier = Modifier.size(20.dp)
+                                        modifier = Modifier.size(20.dp),
+                                        tint = tint,
                                     )
                                 }
                             }
@@ -162,6 +168,7 @@ fun CountCard(
                         text = name,
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.SemiBold,
+                        color = tint,
                     )
                 }
 

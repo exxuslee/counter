@@ -12,13 +12,16 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.addcounter.features.game.models.Event
 import com.exxlexxlee.addcounter.features.game.models.GameViewState
+import com.exxlexxlee.addcounter.ui.common.Icons
 import com.exxlexxlee.addcounter.ui.common.ListEmptyView
 import com.exxlexxlee.addcounter.ui.common.ScreenMessageWithAction
 import com.exxlexxlee.domain.model.UiState
@@ -65,6 +68,8 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                             iconRes = count.icon,
                             name = count.name,
                             current = count.current.toString(),
+                            tint = colorResource(Icons.tint[count.color].first),
+                            background = colorResource(Icons.tint[count.color].second),
                             onClick = { eventHandler.invoke(Event.Increment(count)) },
                             onDecrement = { eventHandler.invoke(Event.Decrement(count)) },
                         )

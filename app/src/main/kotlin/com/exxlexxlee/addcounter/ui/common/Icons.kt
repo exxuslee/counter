@@ -69,5 +69,16 @@ object Icons {
 
     fun circle(index: Int) = colors.getOrElse(index) { colors[0] }
 
+    val tint = listOf(
+        Pair(R.color.main_1, R.color.bg_1),
+        Pair(R.color.main_2, R.color.bg_2),
+        Pair(R.color.main_3, R.color.bg_3),
+        Pair(R.color.main_4, R.color.bg_4),
+        Pair(R.color.main_5, R.color.bg_5),
+        Pair(R.color.main_6, R.color.bg_6),
+        Pair(R.color.main_7, R.color.bg_7),
+        Pair(R.color.main_8, R.color.bg_8),
+    )
+
 
 }
