@@ -13,7 +13,6 @@ fun Count.toData(): CountEntity {
         operator = this.operator,
         icon = this.icon,
         color = this.color,
-        photos = this.photos,
         active = this.active,
     )
 }
@@ -28,7 +27,6 @@ fun CountEntity.toDomain(): Count {
         operator = this.operator,
         icon = this.icon,
         color = this.color,
-        photos = this.photos,
         active = this.active,
     )
 }

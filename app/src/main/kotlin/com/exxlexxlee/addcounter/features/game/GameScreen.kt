@@ -8,7 +8,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.exxlexxlee.addcounter.features.game.models.Action
 import com.exxlexxlee.addcounter.features.game.models.Event
-import com.exxlexxlee.addcounter.ui.common.AddPlayerDialog
+import com.exxlexxlee.addcounter.ui.common.AddCountDialog
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -35,12 +35,16 @@ fun GameScreen(
         }
 
         Action.AddPlayer -> {
-            AddPlayerDialog(
+            AddCountDialog(
                 onDismissRequest = {
                     viewModel.clearAction()
                 },
-                onAddPlayer = { name, selectedIcon ->
-                    viewModel.obtainEvent(Event.AddPlayer(name = name, icon = selectedIcon))
+                onAdd = { name, iconId, colorId ->
+                    viewModel.obtainEvent(Event.AddPlayer(
+                        name = name,
+                        icon = iconId,
+                        colorId = colorId,
+                    ))
                 }
             )
         }

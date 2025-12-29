@@ -1,13 +1,14 @@
 package com.exxlexxlee.addcounter.features.game
+
 import androidx.lifecycle.viewModelScope
-import com.exxlexxlee.domain.model.Count
-import com.exxlexxlee.domain.model.UiState
-import com.exxlexxlee.domain.usecases.PlayersUseCase
 import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.addcounter.features.game.models.Action
 import com.exxlexxlee.addcounter.features.game.models.Event
 import com.exxlexxlee.addcounter.features.game.models.GameViewState
 import com.exxlexxlee.addcounter.ui.common.BaseViewModel
+import com.exxlexxlee.domain.model.Count
+import com.exxlexxlee.domain.model.UiState
+import com.exxlexxlee.domain.usecases.PlayersUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -36,7 +37,8 @@ class GameViewModel(
             Event.AddBonus -> viewModelScope.launch(Dispatchers.IO) {
                 val id = viewState.selectedPlayerId
                 if (id == null || !viewState.activeCounts.map { it.id }.contains(id)) {
-                    viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
+                    viewAction =
+                        Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
                     playersUseCase.save(player.copy(current = player.current + player.increment))
@@ -46,7 +48,8 @@ class GameViewModel(
             Event.AddLevel -> viewModelScope.launch(Dispatchers.IO) {
                 val id = viewState.selectedPlayerId
                 if (id == null || !viewState.activeCounts.map { it.id }.contains(id)) {
-                    viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
+                    viewAction =
+                        Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
                     playersUseCase.save(player.copy(start = player.start + player.increment))
@@ -56,7 +59,8 @@ class GameViewModel(
             Event.SubBonus -> viewModelScope.launch(Dispatchers.IO) {
                 val id = viewState.selectedPlayerId
                 if (id == null || !viewState.activeCounts.map { it.id }.contains(id)) {
-                    viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
+                    viewAction =
+                        Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
                     playersUseCase.save(player.copy(current = player.current - player.increment))
@@ -66,7 +70,8 @@ class GameViewModel(
             Event.SubLevel -> viewModelScope.launch(Dispatchers.IO) {
                 val id = viewState.selectedPlayerId
                 if (id == null || !viewState.activeCounts.map { it.id }.contains(id)) {
-                    viewAction = Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
+                    viewAction =
+                        Action.ShowSelectPlayerMessage(R.string.select_player_toast_message)
                 } else {
                     val player = playersUseCase.count(id) ?: return@launch
                     playersUseCase.save(player.copy(start = player.start - player.increment))
@@ -77,9 +82,15 @@ class GameViewModel(
                 viewState = viewState.copy(selectedPlayerId = viewEvent.id)
             }
 
-            is Event.AddPlayer ->  {
+            is Event.AddPlayer -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    playersUseCase.save(Count(name = viewEvent.name, icon = viewEvent.icon))
+                    playersUseCase.save(
+                        Count(
+                            name = viewEvent.name,
+                            icon = viewEvent.icon,
+                            color = viewEvent.colorId
+                        )
+                    )
                 }
                 viewAction = Action.ShowSelectPlayerMessage(R.string.add_player_toast_message)
             }

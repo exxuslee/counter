@@ -19,7 +19,7 @@ import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.addcounter.features.settings.main.models.Action
 import com.exxlexxlee.addcounter.features.settings.main.models.Event
 import com.exxlexxlee.addcounter.features.settings.main.models.Event.AddPlayer
-import com.exxlexxlee.addcounter.ui.common.AddPlayerDialog
+import com.exxlexxlee.addcounter.ui.common.AddCountDialog
 import com.exxlexxlee.addcounter.ui.common.HSpacer
 import com.exxlexxlee.addcounter.ui.common.LocalNavController
 import org.koin.androidx.compose.koinViewModel
@@ -77,13 +77,13 @@ fun SettingsScreen(
             }
         )
 
-        Action.AddPlayer -> AddPlayerDialog(
+        Action.AddPlayer -> AddCountDialog(
             onDismissRequest = {
                 viewModel.clearAction()
             },
-            onAddPlayer = { name, selectedIcon ->
+            onAdd = { name, iconId, colorId ->
                 viewModel.obtainEvent(
-                    AddPlayer(name = name, icon = selectedIcon)
+                    AddPlayer(name = name, icon = iconId)
                 )
             }
         )

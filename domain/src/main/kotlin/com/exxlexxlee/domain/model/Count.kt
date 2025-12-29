@@ -13,6 +13,5 @@ data class Count(
     val operator: Operator = Operator.ADD,
     val icon: Int = 0,
     val color: Int = 0,
-    val photos: List<Int> = emptyList(),
     val active: Boolean = true,
 )

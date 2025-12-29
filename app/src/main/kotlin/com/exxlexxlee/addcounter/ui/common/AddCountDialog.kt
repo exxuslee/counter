@@ -28,13 +28,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.exxlexxlee.addcounter.R
+import kotlin.random.Random
+
 
 @Composable
-fun AddPlayerDialog(
+fun AddCountDialog(
     onDismissRequest: () -> Unit,
-    onAddPlayer: (String, Int) -> Unit,
+    onAdd: (String, Int, Int) -> Unit,
 ) {
-    var selectedIcon by remember { mutableIntStateOf(0) }
+    var selectedIcon by remember { mutableIntStateOf(Random.nextInt(Icons.all.size)) }
+    var selectedColor by remember { mutableIntStateOf(0) }
     var name by remember { mutableStateOf("") }
 
     AlertDialog(
@@ -59,7 +62,8 @@ fun AddPlayerDialog(
                 )
                 VSpacer(16.dp)
 
-                var expanded by remember { mutableStateOf(false) }
+                var expandedIcon by remember { mutableStateOf(false) }
+                var expandedColor by remember { mutableStateOf(false) }
                 val localContext = LocalContext.current
                 val text = stringResource(R.string.max_lenght_name)
                 OutlinedTextField(
@@ -75,14 +79,14 @@ fun AddPlayerDialog(
                                 modifier = Modifier
                                     .size(36.dp)
                                     .clickable(
-                                        onClick = { expanded = true }
+                                        onClick = { expandedIcon = true }
                                     ),
                                 painter = painterResource(id = Icons.icon(selectedIcon)),
                                 contentDescription = stringResource(R.string.select_icon)
                             )
                             DropdownMenu(
-                                expanded = expanded,
-                                onDismissRequest = { expanded = false }
+                                expanded = expandedIcon,
+                                onDismissRequest = { expandedIcon = false }
                             ) {
                                 Icons.all.forEachIndexed { index, icon ->
                                     DropdownMenuItem(
@@ -95,7 +99,40 @@ fun AddPlayerDialog(
                                         },
                                         onClick = {
                                             selectedIcon = index
-                                            expanded = false
+                                            expandedIcon = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    },
+                    trailingIcon = {
+                        Box {
+                            Image(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .clickable(
+                                        onClick = { expandedColor = true }
+                                    ),
+                                painter = painterResource(id = Icons.circle(selectedColor)),
+                                contentDescription = stringResource(R.string.select_icon)
+                            )
+                            DropdownMenu(
+                                expanded = expandedColor,
+                                onDismissRequest = { expandedColor = false }
+                            ) {
+                                Icons.colors.forEachIndexed { index, colorCircle ->
+                                    DropdownMenuItem(
+                                        text = {
+                                            Image(
+                                                painter = painterResource(id = colorCircle),
+                                                modifier = Modifier.size(36.dp),
+                                                contentDescription = stringResource(R.string.select_icon)
+                                            )
+                                        },
+                                        onClick = {
+                                            selectedColor = index
+                                            expandedColor = false
                                         }
                                     )
                                 }
@@ -111,7 +148,7 @@ fun AddPlayerDialog(
         confirmButton = {
             TextButton(
                 onClick = {
-                    onAddPlayer.invoke(name, selectedIcon)
+                    onAdd.invoke(name, selectedIcon, selectedColor)
                 }
             ) {
                 Text(

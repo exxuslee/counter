@@ -56,5 +56,18 @@ object Icons {
         all[0]
     }
 
+    val colors = listOf(
+        R.drawable.color_circle_1,
+        R.drawable.color_circle_2,
+        R.drawable.color_circle_3,
+        R.drawable.color_circle_4,
+        R.drawable.color_circle_5,
+        R.drawable.color_circle_6,
+        R.drawable.color_circle_7,
+        R.drawable.color_circle_8,
+    )
+
+    fun circle(index: Int) = colors.getOrElse(index) { colors[0] }
+
 
 }

@@ -16,6 +16,5 @@ data class CountEntity(
     val operator: Operator,
     val icon: Int,
     val color: Int,
-    val photos: List<Int>,
     val active: Boolean,
 )
