@@ -74,5 +74,6 @@
     <string name="game_empty_players_list">Порожньо.\nБудь ласка, додайте лічильник</string>
     <string name="retry">Повторити</string>
     <string name="error_description">Перевірте підключення до мережі і спробуйте ще раз</string>
+    <string name="sound">Звук</string>
 
 </resources>

@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">Vide.\nVeuillez ajouter un compteur</string>
     <string name="retry">Réessayer</string>
     <string name="error_description">Vérifiez votre connexion et réessayez</string>
+    <string name="sound">Son</string>
 
 </resources>
 

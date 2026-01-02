@@ -39,10 +39,9 @@ fun GameScreen(
         is Action.Sound -> {
             viewModel.clearAction()
             val newValue = (viewAction as Action.Sound).new
-                .abs()
-                .toBigInteger()
-                .remainder(BigInteger.TEN)
-                .toInt()
+                .stripTrailingZeros()
+                .toPlainString()
+                .last()
             soundManager.play(newValue)
         }
 

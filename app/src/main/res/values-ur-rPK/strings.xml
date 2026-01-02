@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">خالی ہے۔\nبراہ کرم کاؤنٹر شامل کریں</string>
     <string name="retry">دوبارہ کوشش کریں</string>
     <string name="error_description">اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں</string>
+    <string name="sound">آواز</string>
 
 </resources>
 

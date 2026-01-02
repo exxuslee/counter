@@ -3,6 +3,7 @@ package com.exxlexxlee.domain.usecases
 import android.util.Log
 import com.exxlexxlee.domain.repositories.SettingsRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.StateFlow
 
 interface SettingsUseCase {
     fun selectedRoute(): String
@@ -11,6 +12,10 @@ interface SettingsUseCase {
 
     fun isTermsOfUseRead(): Boolean
     fun isTermsOfUseRead(ok: Boolean)
+
+    val isSound: StateFlow<Boolean>
+    fun setSound(value: Boolean)
+    fun isSound(): Boolean
 
     class Base(
         private val settingsRepository: SettingsRepository,
@@ -30,6 +35,14 @@ interface SettingsUseCase {
         override fun isTermsOfUseRead(ok: Boolean) {
             settingsRepository.isTermsOfUseRead(ok)
         }
+
+        override val isSound: StateFlow<Boolean> = settingsRepository.isSound
+
+        override fun setSound(value: Boolean) {
+            settingsRepository.isSound(value)
+        }
+
+        override fun isSound() = settingsRepository.isSound()
 
     }
 

@@ -204,6 +204,25 @@ fun SettingsView(
                 },
                 {
                     HsRow(
+                        imageVector = ImageVector.vectorResource(R.drawable.outline_sound_detection_loud_sound_24),
+                        titleContent = {
+                            Text(
+                                stringResource(R.string.sound),
+                                modifier = Modifier.padding(horizontal = 12.dp),
+                                color = MaterialTheme.colorScheme.secondary,
+                            )
+                        },
+                        arrowRight = false,
+                    ) {
+                        Switch(
+                            checked = viewState.isSound,
+                            onCheckedChange = { eventHandler.invoke(Event.IsSound(!viewState.isSound)) },
+                            colors = SwitchDefaults.colors()
+                        )
+                    }
+                },
+                {
+                    HsRow(
                         imageVector = ImageVector.vectorResource(R.drawable.outline_language_24),
                         titleContent = {
                             Text(

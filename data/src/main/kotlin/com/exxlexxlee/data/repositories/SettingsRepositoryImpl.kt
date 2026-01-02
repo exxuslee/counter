@@ -12,6 +12,8 @@ class SettingsRepositoryImpl(
 ) : SettingsRepository {
     private companion object {
         const val KEY_IS_DARK = "isDark"
+        const val KEY_IS_SOUND = "isSound"
+
         const val KEY_SELECTED_ROUTE = "selectedRoute"
         const val KEY_TERMS_OF_USE_READ = "isTermsOfUseRead"
         const val DEFAULT_ROUTE = "game"
@@ -20,6 +22,16 @@ class SettingsRepositoryImpl(
 
     override fun isDark(): Boolean = prefs.getBoolean(KEY_IS_DARK, false)
     override fun isDark(value: Boolean) = prefs.edit { putBoolean(KEY_IS_DARK, value) }
+
+    private val _isSound = MutableStateFlow(isSound())
+    override val isSound = _isSound.asStateFlow()
+    override fun isSound(value: Boolean) {
+        prefs.edit { putBoolean(KEY_IS_SOUND, value) }
+        _isSound.value = value
+    }
+
+    override fun isSound() = prefs.getBoolean(KEY_IS_SOUND, false)
+
 
 
     override fun selectedRoute(): String =

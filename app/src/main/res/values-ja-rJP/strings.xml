@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">空です。\nカウンターを追加してください</string>
     <string name="retry">再試行</string>
     <string name="error_description">接続を確認して、もう一度お試しください</string>
+    <string name="sound">サウンド</string>
 
 </resources>
 

@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">Vazio.\nPor favor, adicione um contador</string>
     <string name="retry">Tentar novamente</string>
     <string name="error_description">Verifique sua conexão e tente novamente</string>
+    <string name="sound">Som</string>
 
 </resources>
 

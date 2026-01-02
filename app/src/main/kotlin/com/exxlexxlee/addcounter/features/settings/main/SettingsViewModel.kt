@@ -1,14 +1,13 @@
 package com.exxlexxlee.addcounter.features.settings.main
 
 import androidx.lifecycle.viewModelScope
-import com.exxlexxlee.domain.model.Count
-import com.exxlexxlee.domain.usecases.PlayersUseCase
-import com.exxlexxlee.domain.usecases.SettingsUseCase
-import com.exxlexxlee.domain.usecases.ThemeController
 import com.exxlexxlee.addcounter.features.settings.main.models.Action
 import com.exxlexxlee.addcounter.features.settings.main.models.Event
 import com.exxlexxlee.addcounter.features.settings.main.models.ViewState
 import com.exxlexxlee.addcounter.ui.common.BaseViewModel
+import com.exxlexxlee.domain.usecases.PlayersUseCase
+import com.exxlexxlee.domain.usecases.SettingsUseCase
+import com.exxlexxlee.domain.usecases.ThemeController
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.combine
@@ -29,11 +28,13 @@ class SettingsViewModel(
                 themeController.isDark,
                 settingsUseCase.isTermsOfUseRead,
                 playersUseCase.counts,
-            ) { isDark, isTermsOfUseRead, players ->
+                settingsUseCase.isSound,
+            ) { isDark, isTermsOfUseRead, players, isSound ->
                 ViewState(
                     isTermsOfUseRead = isTermsOfUseRead,
                     isDark = isDark,
-                    counts = players
+                    counts = players,
+                    isSound = isSound,
                 )
             }.collect { newState ->
                 viewState = newState
@@ -54,7 +55,7 @@ class SettingsViewModel(
             Event.ConfirmNewGame -> {
                 viewModelScope.launch(Dispatchers.IO) {
                     playersUseCase.counts.value.forEach { player ->
-                        val resetPlayer = player.copy(start = BigDecimal.ZERO,)
+                        val resetPlayer = player.copy(start = BigDecimal.ZERO)
                         playersUseCase.save(resetPlayer)
                     }
                     delay(500)
@@ -82,6 +83,10 @@ class SettingsViewModel(
                 viewModelScope.launch(Dispatchers.IO) {
                     playersUseCase.delete(viewEvent.id)
                 }
+            }
+
+            is Event.IsSound -> {
+                settingsUseCase.setSound(viewEvent.newValue)
             }
         }
 

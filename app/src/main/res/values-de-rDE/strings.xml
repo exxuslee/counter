@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">Leer.\nBitte fügen Sie einen Zähler hinzu</string>
     <string name="retry">Erneut versuchen</string>
     <string name="error_description">Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut</string>
+    <string name="sound">Ton</string>
 
 </resources>
 

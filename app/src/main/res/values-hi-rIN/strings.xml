@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">खाली है।\nकृपया काउंटर जोड़ें</string>
     <string name="retry">पुनः प्रयास करें</string>
     <string name="error_description">अपना कनेक्शन जांचें और फिर से प्रयास करें</string>
+    <string name="sound">आवाज़</string>
 
 </resources>
 

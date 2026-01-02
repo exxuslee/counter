@@ -34,20 +34,20 @@ class SoundManager(context: Context) {
         }
     }
 
-    fun play(number: Int) {
+    fun play(number: Char) {
         if (audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0) return
         runCatching {
             val sound = when (number) {
-                0 -> TONE_0
-                1 -> TONE_1
-                2 -> TONE_2
-                3 -> TONE_3
-                4 -> TONE_4
-                5 -> TONE_5
-                6 -> TONE_6
-                7 -> TONE_7
-                8 -> TONE_8
-                9 -> TONE_9
+                '0' -> TONE_0
+                '1' -> TONE_1
+                '2' -> TONE_2
+                '3' -> TONE_3
+                '4' -> TONE_4
+                '5' -> TONE_5
+                '6' -> TONE_6
+                '7' -> TONE_7
+                '8' -> TONE_8
+                '9' -> TONE_9
                 else -> SUB_BONUS
             }
             toneGenerator.startTone(sound.tone, sound.durationMs)

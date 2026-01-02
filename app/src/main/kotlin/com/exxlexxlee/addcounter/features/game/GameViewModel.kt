@@ -8,14 +8,17 @@ import com.exxlexxlee.addcounter.ui.common.BaseViewModel
 import com.exxlexxlee.domain.model.Operator
 import com.exxlexxlee.domain.model.UiState
 import com.exxlexxlee.domain.usecases.PlayersUseCase
+import com.exxlexxlee.domain.usecases.SettingsUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class GameViewModel(
     private val playersUseCase: PlayersUseCase,
+    private val settingsUseCase: SettingsUseCase,
 ) : BaseViewModel<GameViewState, Action, Event>(
     initialState = GameViewState()
 ) {
+    private var isSoundEnabled: Boolean = false
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
@@ -28,7 +31,13 @@ class GameViewModel(
                 )
             }
         }
+        viewModelScope.launch {
+            settingsUseCase.isSound.collect {
+                isSoundEnabled = it
+            }
+        }
     }
+
 
     override fun obtainEvent(viewEvent: Event) {
         when (viewEvent) {
@@ -41,7 +50,7 @@ class GameViewModel(
                     Operator.DIVIDE -> viewEvent.count.current / viewEvent.count.increment
                 }
                 playersUseCase.save(viewEvent.count.copy(current = new))
-                viewAction = Action.Sound(new)
+                if (isSoundEnabled) viewAction = Action.Sound(new)
             }
 
             is Event.Decrement -> viewModelScope.launch(Dispatchers.IO) {
@@ -52,7 +61,7 @@ class GameViewModel(
                     Operator.DIVIDE -> viewEvent.count.current * viewEvent.count.increment
                 }
                 playersUseCase.save(viewEvent.count.copy(current = new))
-                viewAction = Action.Sound(new)
+                if (isSoundEnabled) viewAction = Action.Sound(new)
             }
 
             is Event.SelectPlayer -> {

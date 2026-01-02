@@ -4,6 +4,7 @@ import com.exxlexxlee.domain.model.Count
 
 sealed class Event {
     data class IsDark(val newValue: Boolean) : Event()
+    data class IsSound(val newValue: Boolean) : Event()
     object ConfirmNewGame : Event()
     object DialogNewGame : Event()
     object DialogAddPlayer : Event()

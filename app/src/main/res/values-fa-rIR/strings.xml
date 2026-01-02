@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">خالی است.\nلطفاً شمارنده را اضافه کنید</string>
     <string name="retry">تلاش مجدد</string>
     <string name="error_description">اتصال خود را بررسی کنید و دوباره تلاش کنید</string>
+    <string name="sound">صدا</string>
 
 </resources>
 

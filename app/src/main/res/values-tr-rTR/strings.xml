@@ -74,6 +74,7 @@
     <string name="game_empty_players_list">Boş.\nLütfen sayaç ekleyin</string>
     <string name="retry">Yeniden dene</string>
     <string name="error_description">Bağlantınızı kontrol edip tekrar deneyin</string>
+    <string name="sound">Ses</string>
 
 </resources>
 

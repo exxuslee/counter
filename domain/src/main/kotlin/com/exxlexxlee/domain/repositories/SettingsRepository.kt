@@ -1,11 +1,16 @@
 package com.exxlexxlee.domain.repositories
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.StateFlow
 
 interface SettingsRepository {
 
     fun isDark(): Boolean
     fun isDark(value: Boolean)
+
+    val isSound: StateFlow<Boolean>
+    fun isSound(value: Boolean)
+    fun isSound(): Boolean
 
     fun selectedRoute(): String
     fun selectedRoute(route: String)
