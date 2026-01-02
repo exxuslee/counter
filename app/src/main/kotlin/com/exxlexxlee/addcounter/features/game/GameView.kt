@@ -52,20 +52,14 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                     icon = R.drawable.outline_empty_dashboard_24,
                 )
 
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(
-                        getGridColumns(
-                            isLandscape,
-                            gameViewState.activeCounts.size
-                        )
-                    ),
-                    modifier = Modifier.weight(1f),
-                    contentPadding = PaddingValues(vertical = 8.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(gameViewState.activeCounts) { count ->
+                val columns = getGridColumns(
+                    isLandscape, gameViewState.activeCounts.size
+                )
+
+                when (columns) {
+                    1 -> gameViewState.activeCounts.forEach { count ->
                         CountCard(
+                            modifier = Modifier.weight(1f),
                             iconRes = count.icon,
                             name = count.name,
                             current = count.current.toString(),
@@ -74,6 +68,29 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                             onClick = { eventHandler.invoke(Event.Increment(count)) },
                             onDecrement = { eventHandler.invoke(Event.Decrement(count)) },
                         )
+                    }
+
+                    else -> {
+                        LazyVerticalGrid(
+                            columns = GridCells.Fixed(columns),
+                            modifier = Modifier.fillMaxSize(),
+                            contentPadding = PaddingValues(vertical = 8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            items(gameViewState.activeCounts) { count ->
+                                CountCard(
+                                    modifier = Modifier,
+                                    iconRes = count.icon,
+                                    name = count.name,
+                                    current = count.current.toString(),
+                                    tint = colorResource(Icons.tint[count.color].first),
+                                    background = colorResource(Icons.tint[count.color].second),
+                                    onClick = { eventHandler.invoke(Event.Increment(count)) },
+                                    onDecrement = { eventHandler.invoke(Event.Decrement(count)) },
+                                )
+                            }
+                        }
                     }
                 }
 
