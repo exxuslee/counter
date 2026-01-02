@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -54,6 +53,7 @@ import com.exxlexxlee.addcounter.ui.common.HSpacer
 import com.exxlexxlee.addcounter.ui.common.Icons
 import com.exxlexxlee.addcounter.ui.common.RippleRadius
 import com.exxlexxlee.addcounter.ui.theme.AppTheme
+import java.math.BigDecimal
 
 
 @Composable
@@ -61,13 +61,12 @@ fun CountCard(
     modifier: Modifier = Modifier,
     @DrawableRes iconRes: Int,
     name: String,
-    current: String = "0",
+    current: BigDecimal,
     background: Color = MaterialTheme.colorScheme.surfaceContainer,
     tint: Color = MaterialTheme.colorScheme.surfaceVariant,
     onClick: () -> Unit,
     onDecrement: () -> Unit,
 ) {
-    val soundManager = rememberSoundManager()
     var scale by remember { mutableFloatStateOf(1f) }
     val animatedScale by animateFloatAsState(
         targetValue = scale,
@@ -138,7 +137,7 @@ fun CountCard(
                     }
 
                     Text(
-                        text = current,
+                        text = current.toPlainString(),
                         style = MaterialTheme.typography.displayLarge,
                         fontWeight = FontWeight.Bold,
                         fontSize = 48.sp,
@@ -214,7 +213,10 @@ fun CountCard(
 fun CountCard_Preview() {
     AppTheme {
         CountCard(
-            iconRes = R.drawable.outline_local_cafe_24, name = "Label", onClick = {}
+            iconRes = R.drawable.outline_local_cafe_24,
+            name = "Label",
+            current = BigDecimal.TEN,
+            onClick = {}
         ) {
 
         }

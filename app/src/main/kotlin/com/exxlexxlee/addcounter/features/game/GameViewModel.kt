@@ -41,6 +41,7 @@ class GameViewModel(
                     Operator.DIVIDE -> viewEvent.count.current / viewEvent.count.increment
                 }
                 playersUseCase.save(viewEvent.count.copy(current = new))
+                viewAction = Action.Sound(new)
             }
 
             is Event.Decrement -> viewModelScope.launch(Dispatchers.IO) {
@@ -51,6 +52,7 @@ class GameViewModel(
                     Operator.DIVIDE -> viewEvent.count.current * viewEvent.count.increment
                 }
                 playersUseCase.save(viewEvent.count.copy(current = new))
+                viewAction = Action.Sound(new)
             }
 
             is Event.SelectPlayer -> {
