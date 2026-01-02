@@ -55,100 +55,97 @@ import com.exxlexxlee.addcounter.ui.common.VSpacer
 import com.exxlexxlee.addcounter.ui.theme.AppTheme
 import kotlinx.coroutines.launch
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DonateView(viewState: ViewState, eventHandler: (Event) -> Unit) {
+    val scrollState = rememberScrollState()
+    val clipboard = LocalClipboard.current
     Column(
         modifier = Modifier
+            .verticalScroll(scrollState)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        val clipboard = LocalClipboard.current
-        val scrollState = rememberScrollState()
-        Column(
-            modifier = Modifier.verticalScroll(scrollState),
-        ) {
-            Text(
-                modifier = Modifier.padding(12.dp),
-                text = stringResource(R.string.donate_header_hint),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            DonationAmountSelector(
-                selectedAmount = viewState.selectedAmount.toInt(),
-                items = viewState.availableAmounts,
-                onAmountSelected = { amount -> eventHandler(Event.OnAmountSelected(amount)) }
-            )
-            VSpacer(24.dp)
-            CellUniversalSection(
-                viewState.donates.map { donat ->
-                    {
-                        HsRow(
-                            iconContent = {
-                                Image(
-                                    painterResource(donat.icon),
-                                    modifier = Modifier.size(30.dp),
-                                    contentDescription = null,
+        Text(
+            modifier = Modifier.padding(12.dp),
+            text = stringResource(R.string.donate_header_hint),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        DonationAmountSelector(
+            selectedAmount = viewState.selectedAmount.toInt(),
+            items = viewState.availableAmounts,
+            onAmountSelected = { amount -> eventHandler(Event.OnAmountSelected(amount)) }
+        )
+        VSpacer(24.dp)
+        CellUniversalSection(
+            viewState.donates.map { donat ->
+                {
+                    HsRow(
+                        iconContent = {
+                            Image(
+                                painterResource(donat.icon),
+                                modifier = Modifier.size(30.dp),
+                                contentDescription = null,
+                            )
+                        },
+                        titleContent = {
+                            Column(
+                                modifier = Modifier
+                                    .padding(horizontal = 12.dp)
+                                    .weight(6f)
+                            ) {
+                                Text(
+                                    text = donat.chain,
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
-                            },
-                            titleContent = {
-                                Column(
-                                    modifier = Modifier.padding(horizontal = 12.dp)
-                                        .weight(6f)
-                                ) {
-                                    Text(
-                                        text = donat.chain,
-                                        style = MaterialTheme.typography.titleMedium,
-                                        fontWeight = FontWeight.SemiBold,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    )
-                                    Text(
-                                        text = donat.address,
-                                        style = MaterialTheme.typography.bodyMedium,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.MiddleEllipsis,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    )
-                                }
-                            },
-                            onClick = {
-                                eventHandler.invoke(Event.OnChainSelected(donat))
-                            },
-                            onSelect = donat == viewState.selectedChain,
-                            arrowRight = false,
-                        ) {
-                            val scope = rememberCoroutineScope()
-                            HsIconButton({
-                                scope.launch {
-                                    clipboard.setClipEntry(
-                                        ClipEntry(
-                                            ClipData.newPlainText(donat.chain, donat.address)
-                                        )
-                                    )
-                                }
-
-                                eventHandler.invoke(Event.AddressCopied)
-                            }) {
-                                Icon(
-                                    painter = painterResource(id = R.drawable.outline_content_copy_24),
-                                    contentDescription = stringResource(R.string.donate_copy_cd),
-                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                Text(
+                                    text = donat.address,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.MiddleEllipsis,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                             }
+                        },
+                        onClick = {
+                            eventHandler.invoke(Event.OnChainSelected(donat))
+                        },
+                        onSelect = donat == viewState.selectedChain,
+                        arrowRight = false,
+                    ) {
+                        val scope = rememberCoroutineScope()
+                        HsIconButton({
+                            scope.launch {
+                                clipboard.setClipEntry(
+                                    ClipEntry(
+                                        ClipData.newPlainText(donat.chain, donat.address)
+                                    )
+                                )
+                            }
+
+                            eventHandler.invoke(Event.AddressCopied)
+                        }) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.outline_content_copy_24),
+                                contentDescription = stringResource(R.string.donate_copy_cd),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
                         }
                     }
                 }
-            )
-            VSpacer(24.dp)
+            }
+        )
+        VSpacer(24.dp)
 
-            DonationTickerSelector(
-                items = viewState.tickers,
-                selectedAmount = viewState.selectedTicker,
-                onItemSelected = { item -> eventHandler(Event.OnTickerSelected(item)) }
-            )
-            VSpacer(12.dp)
-        }
+        DonationTickerSelector(
+            items = viewState.tickers,
+            selectedAmount = viewState.selectedTicker,
+            onItemSelected = { item -> eventHandler(Event.OnTickerSelected(item)) }
+        )
+        VSpacer(12.dp)
 
         Row(
             modifier = Modifier
@@ -204,7 +201,7 @@ fun DonateView(viewState: ViewState, eventHandler: (Event) -> Unit) {
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        VFillSpacer(12.dp)
+        VSpacer(48.dp)
     }
 
 }

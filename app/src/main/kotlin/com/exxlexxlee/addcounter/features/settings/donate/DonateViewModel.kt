@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.math.BigDecimal
+import java.math.BigInteger
 import java.math.MathContext
 import java.math.RoundingMode
 
@@ -166,41 +167,81 @@ class DonateViewModel(
             }
 
             DonateChainItem.Ethereum -> when (ticker) {
-                DonateItem.Ethereum ->
-                    "ethereum:${chain.address}?value=$amount".toUri()
+                DonateItem.Ethereum -> {
+                    val weiAmount: BigInteger =
+                        amount.toBigDecimal()
+                            .multiply(BigDecimal("1000000000000000000")) // 1e18
+                            .setScale(0, RoundingMode.DOWN)
+                            .toBigInteger()
+                    "ethereum:${chain.address}@1?value=$weiAmount".toUri()
+                }
 
                 DonateItem.Usdt, DonateItem.Usdc -> {
                     val contract = when (ticker) {
-                        DonateItem.Usdt -> "0xdAC17F958D2ee523a2206206994597C13D831ec7" // USDT ERC20
-                        DonateItem.Usdc -> "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eb48" // USDC ERC20
-                        else -> ""
+                        DonateItem.Usdt -> "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+                        DonateItem.Usdc -> "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+                        else -> error("Unsupported token")
                     }
-                    val chainId = 1 // Ethereum mainnet
-                    "ethereum:$contract@$chainId?value=$amount".toUri()
+                    val tokenAmount: BigInteger =
+                        amount.toBigDecimal()
+                            .multiply(BigDecimal("1000000000000000000"))
+                            .setScale(0, RoundingMode.DOWN)
+                            .toBigInteger()
+                    val to = chain.address
+                    "ethereum:$contract@1/transfer?address=$to&uint256=$tokenAmount".toUri()
                 }
 
                 else -> null
             }
 
             DonateChainItem.BSC -> when (ticker) {
-                DonateItem.Bnb ->
-                    "ethereum:${chain.address}?value=$amount".toUri() // MetaMask BNB в BEP20
+                DonateItem.Bnb -> {
+                    val weiAmount: BigInteger = amount.toBigDecimal()
+                        .multiply(BigDecimal("1000000000000000000"))
+                        .setScale(0, RoundingMode.DOWN)
+                        .toBigInteger()
+                    "ethereum:${chain.address}@56?value=$weiAmount".toUri()
+                }
 
                 DonateItem.Usdt, DonateItem.Usdc -> {
                     val contract = when (ticker) {
-                        DonateItem.Usdt -> "0x55d398326f99059fF775485246999027B3197955" // USDT BEP20
-                        DonateItem.Usdc -> "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d" // USDC BEP20
-                        else -> ""
+                        DonateItem.Usdt -> "0x55d398326f99059fF775485246999027B3197955"
+                        DonateItem.Usdc -> "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+                        else -> error("Unsupported token")
                     }
-                    val chainId = 56 // BSC mainnet
-                    "ethereum:$contract@$chainId?value=$amount".toUri()
+                    val tokenAmount: BigInteger = amount.toBigDecimal()
+                        .multiply(BigDecimal("1000000000000000000"))
+                        .setScale(0, RoundingMode.DOWN)
+                        .toBigInteger()
+
+                    val to = chain.address
+                    "ethereum:$contract@56/transfer?address=$to&uint256=$tokenAmount".toUri()
                 }
 
                 else -> null
             }
 
-            DonateChainItem.Solana -> {
-                "solana:${chain.address}?amount=$amount".toUri()
+            DonateChainItem.Solana -> when (ticker) {
+                DonateItem.Solana -> {
+                    "solana:${chain.address}?amount=$amount".toUri()
+                }
+
+                DonateItem.Usdt, DonateItem.Usdc -> {
+                    val mint = when (ticker) {
+                        DonateItem.Usdt -> "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+                        DonateItem.Usdc -> "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+                        else -> error("Unsupported token")
+                    }
+
+                    val tokenAmount = amount.toBigDecimal()
+                        .multiply(BigDecimal("1000000"))
+                        .setScale(0, RoundingMode.DOWN)
+                        .toBigInteger()
+
+                    "solana:${chain.address}?amount=$tokenAmount&spl-token=$mint".toUri()
+                }
+
+                else -> null
             }
 
             DonateChainItem.Tron -> {

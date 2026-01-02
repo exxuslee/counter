@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -47,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.exxlexxlee.addcounter.R
+import com.exxlexxlee.addcounter.managers.rememberSoundManager
 import com.exxlexxlee.addcounter.ui.common.HSpacer
 import com.exxlexxlee.addcounter.ui.common.Icons
 import com.exxlexxlee.addcounter.ui.common.RippleRadius
@@ -64,7 +67,7 @@ fun CountCard(
     onClick: () -> Unit,
     onDecrement: () -> Unit,
 ) {
-
+    val soundManager = rememberSoundManager()
     var scale by remember { mutableFloatStateOf(1f) }
     val animatedScale by animateFloatAsState(
         targetValue = scale,
@@ -111,9 +114,7 @@ fun CountCard(
                 modifier = Modifier.fillMaxSize()
             ) {
                 Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f),
+                    modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.Top
                 ) {
@@ -147,6 +148,8 @@ fun CountCard(
                     HSpacer(0.dp)
 
                 }
+
+                Spacer(modifier = Modifier.weight(1f))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),

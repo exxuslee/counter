@@ -83,7 +83,7 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                                     modifier = Modifier,
                                     iconRes = count.icon,
                                     name = count.name,
-                                    current = count.current.toString(),
+                                    current = count.current.stripTrailingZeros().toString(),
                                     tint = colorResource(Icons.tint[count.color].first),
                                     background = colorResource(Icons.tint[count.color].second),
                                     onClick = { eventHandler.invoke(Event.Increment(count)) },
