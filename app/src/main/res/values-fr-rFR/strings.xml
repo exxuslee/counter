@@ -1,12 +1,12 @@
 <resources>
-    <string name="new_game">Nouvelle partie</string>
+    <string name="new_game">Réinitialiser les compteurs</string>
     <string name="about">À propos</string>
     <string name="about_app">À propos de l\'application</string>
-    <string name="add_player">Ajouter un joueur</string>
+    <string name="add_player">Ajouter un compteur</string>
     <string name="name">Nom</string>
     <string name="back">Retour</string>
     <string name="icon">Icône</string>
-    <string name="delete_player">Supprimer le joueur</string>
+    <string name="delete_player">Supprimer le compteur</string>
     <string name="double_back_press_message">Appuyez à nouveau pour quitter</string>
     <string name="add_level">Ajouter un niveau</string>
     <string name="sub_level">Diminuer le niveau</string>
@@ -24,7 +24,7 @@
     <string name="label_dark_mode">Mode sombre</string>
     <string name="terms_of_use">Conditions d\'utilisation</string>
     <string name="terms_last_updated">Dernière mise à jour : %1$s</string>
-    <string name="terms_default_date">Décembre 2024</string>
+    <string name="terms_default_date">Décembre 2025</string>
     <string name="terms_section_1_title">1. Acceptation des conditions</string>
     <string name="terms_section_1_content">En installant ou en utilisant cette application, vous acceptez ces conditions d\'utilisation. Si vous n\'acceptez pas une partie des conditions, veuillez ne pas utiliser l\'application.</string>
     <string name="terms_section_2_title">2. Description de l\'application</string>
@@ -47,39 +47,33 @@
     <string name="terms_section_10_content">Ces conditions d\'utilisation peuvent être mises à jour à l\'avenir. L\'utilisation continue de l\'application après les modifications constitue une acceptation des conditions mises à jour.</string>
     <string name="terms_section_11_title">11. Informations de contact</string>
     <string name="terms_section_11_content">Si vous avez des questions ou des commentaires concernant ces conditions d\'utilisation, vous pouvez contacter le développeur via la plateforme où l\'application est distribuée.</string>
-    <string name="terms_footer">En utilisant Simple Munchkin Counter, vous reconnaissez avoir lu, compris et accepté d\'être lié par ces conditions d\'utilisation.</string>
+    <string name="terms_footer">En utilisant Counter 123, vous reconnaissez avoir lu, compris et accepté d\'être lié par ces conditions d\'utilisation.</string>
     <string name="terms_accept_button">Accepter les conditions</string>
-    <string name="counter">Compteur Munchkin</string>
-    <string name="new_game_title">Nouvelle partie</string>
-    <string name="new_game_message">Êtes-vous sûr de vouloir commencer une nouvelle partie ?</string>
+    <string name="counter">Compteur</string>
+    <string name="new_game_message">Êtes-vous sûr de vouloir réinitialiser tous les compteurs ?</string>
     <string name="confirm">Confirmer</string>
     <string name="cancel">Annuler</string>
     <string name="add">Ajouter</string>
-    <string name="add_player_message">Sélectionnez l\'icône et le nom du joueur</string>
+    <string name="add_player_message">Sélectionnez l\'icône et le nom du compteur</string>
     <string name="input_name">Entrer le nom</string>
     <string name="select_icon">Sélectionner l\'icône</string>
-    <string name="active_players">Joueurs actifs</string>
-    <string name="select_player_toast_message">Veuillez sélectionner un joueur</string>
-    <string name="add_player_toast_message">Pour ajouter plus de joueurs, ouvrez les paramètres</string>
+    <string name="active_players">Compteurs actifs</string>
+    <string name="select_player_toast_message">Veuillez sélectionner un compteur</string>
     <string name="max_lenght_name">Longueur maximale du nom</string>
-    <string name="remove_player">Retirer le joueur</string>
-    <string name="game_empty_active_players_list">Aucun joueur actif. Veuillez ajouter des joueurs dans les paramètres</string>
+    <string name="remove_player">Retirer le compteur</string>
+    <string name="game_empty_active_players_list">Aucun compteur actif. Veuillez ajouter un compteur dans les paramètres</string>
     <string name="application_title">Application</string>
-    <string name="application_description">Cette application est un compteur de puissance simple et léger pour le jeu de société Munchkin.</string>
+    <string name="application_description">Cette application est un compteur simple et léger.</string>
     <string name="how_it_works_title">Comment ça fonctionne</string>
-    <string name="how_it_works_body">Elle aide les joueurs à calculer et suivre rapidement la force du personnage pendant le jeu, afin que vous puissiez vous concentrer sur le gameplay plutôt que sur les calculs.
-L\'application fonctionne entièrement hors ligne, ne collecte aucune donnée personnelle, ne contient pas de publicités et n\'utilise pas l\'accès réseau.
-Créée par un fan de Munchkin comme compagnon pratique pour un jeu décontracté et convivial.</string>
+    <string name="how_it_works_body">L\'application Counter 123 est votre solution fiable pour tous vos besoins de comptage. Que vous suiviez votre apport quotidien en eau, surveilliez vos répétitions d\'exercice ou calculiez vos dépenses, ce programme polyvalent vous couvre. Son interface intuitive et ses fonctionnalités de gestion puissantes facilitent la tâche.</string>
     <string name="version_title">Version</string>
     <string name="privacy_title">Confidentialité</string>
     <string name="privacy_text">Nous ne collectons pas de données personnelles.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">Vide.\nVeuillez ajouter des joueurs</string>
+    <string name="game_empty_players_list">Vide.\nVeuillez ajouter un compteur</string>
     <string name="retry">Réessayer</string>
     <string name="error_description">Vérifiez votre connexion et réessayez</string>
-    <string name="dice">Dé</string>
-    <string name="throw_dice">Lancer 🎲</string>
 
 </resources>
 

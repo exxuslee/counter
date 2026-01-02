@@ -77,7 +77,7 @@ fun SettingsView(
                 },
                 {
                     HsRow(
-                        imageVector = ImageVector.vectorResource(R.drawable.outline_person_add_24),
+                        imageVector = ImageVector.vectorResource(R.drawable.round_add_circle_outline_24),
                         titleContent = {
                             Text(
                                 stringResource(R.string.add_player),
@@ -114,7 +114,7 @@ fun SettingsView(
                         }
                     ) {
                         Icon(
-                            painter = painterResource(R.drawable.ic_baseline_person_remove_24),
+                            painter = painterResource(R.drawable.round_remove_circle_outline_24),
                             contentDescription = stringResource(R.string.remove_player),
                             modifier = Modifier.padding(horizontal = 24.dp),
                             tint = MaterialTheme.colorScheme.error

@@ -1,12 +1,12 @@
 <resources>
-    <string name="new_game">Yeni oyun</string>
+    <string name="new_game">Sayaçları sıfırla</string>
     <string name="about">Hakkında</string>
     <string name="about_app">Uygulama hakkında</string>
-    <string name="add_player">Oyuncu ekle</string>
+    <string name="add_player">Sayaç ekle</string>
     <string name="name">İsim</string>
     <string name="back">Geri</string>
     <string name="icon">Simge</string>
-    <string name="delete_player">Oyuncuyu sil</string>
+    <string name="delete_player">Sayacı sil</string>
     <string name="double_back_press_message">Çıkmak için tekrar basın</string>
     <string name="add_level">Seviye ekle</string>
     <string name="sub_level">Seviye azalt</string>
@@ -24,7 +24,7 @@
     <string name="label_dark_mode">Karanlık mod</string>
     <string name="terms_of_use">Kullanım koşulları</string>
     <string name="terms_last_updated">Son güncelleme: %1$s</string>
-    <string name="terms_default_date">Aralık 2024</string>
+    <string name="terms_default_date">Aralık 2025</string>
     <string name="terms_section_1_title">1. Koşulların Kabulü</string>
     <string name="terms_section_1_content">Bu uygulamayı yükleyerek veya kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz. Koşulların herhangi bir bölümünü kabul etmiyorsanız, lütfen uygulamayı kullanmayın.</string>
     <string name="terms_section_2_title">2. Uygulamanın Açıklaması</string>
@@ -47,39 +47,33 @@
     <string name="terms_section_10_content">Bu Kullanım Koşulları gelecekte güncellenebilir. Değişikliklerden sonra uygulamanın kullanılmaya devam edilmesi, güncellenmiş koşulların kabulünü oluşturur.</string>
     <string name="terms_section_11_title">11. İletişim Bilgileri</string>
     <string name="terms_section_11_content">Bu Kullanım Koşulları hakkında sorularınız veya geri bildiriminiz varsa, uygulamanın dağıtıldığı platform aracılığıyla geliştiriciye ulaşabilirsiniz.</string>
-    <string name="terms_footer">Simple Munchkin Counter\'ı kullanarak, bu Kullanım Koşullarını okuduğunuzu, anladığınızı ve bunlara bağlı olmayı kabul ettiğinizi kabul edersiniz.</string>
+    <string name="terms_footer">Counter 123\'ı kullanarak, bu Kullanım Koşullarını okuduğunuzu, anladığınızı ve bunlara bağlı olmayı kabul ettiğinizi kabul edersiniz.</string>
     <string name="terms_accept_button">Koşulları kabul et</string>
-    <string name="counter">Munchkin sayacı</string>
-    <string name="new_game_title">Yeni oyun</string>
-    <string name="new_game_message">Yeni bir oyun başlatmak istediğinizden emin misiniz?</string>
+    <string name="counter">Sayaç</string>
+    <string name="new_game_message">Tüm sayaçları sıfırlamak istediğinizden emin misiniz?</string>
     <string name="confirm">Onayla</string>
     <string name="cancel">İptal</string>
     <string name="add">Ekle</string>
-    <string name="add_player_message">Oyuncunun simgesini ve adını seçin</string>
+    <string name="add_player_message">Sayacın simgesini ve adını seçin</string>
     <string name="input_name">İsim girin</string>
     <string name="select_icon">Simge seçin</string>
-    <string name="active_players">Aktif oyuncular</string>
-    <string name="select_player_toast_message">Lütfen bir oyuncu seçin</string>
-    <string name="add_player_toast_message">Daha fazla oyuncu eklemek için ayarları açın</string>
+    <string name="active_players">Aktif sayaçlar</string>
+    <string name="select_player_toast_message">Lütfen bir sayaç seçin</string>
     <string name="max_lenght_name">İsim maksimum uzunluğu</string>
-    <string name="remove_player">Oyuncuyu kaldır</string>
-    <string name="game_empty_active_players_list">Aktif oyuncu yok. Lütfen ayarlardan oyuncu ekleyin</string>
+    <string name="remove_player">Sayacı kaldır</string>
+    <string name="game_empty_active_players_list">Aktif sayaç yok. Lütfen ayarlardan sayaç ekleyin</string>
     <string name="application_title">Uygulama</string>
-    <string name="application_description">Bu uygulama, masa oyunu Munchkin için basit ve hafif bir güç sayacıdır.</string>
+    <string name="application_description">Bu uygulama basit ve hafif bir sayacıdır.</string>
     <string name="how_it_works_title">Nasıl Çalışır</string>
-    <string name="how_it_works_body">Oyun sırasında karakter gücünü hızlı bir şekilde hesaplamaya ve takip etmeye yardımcı olur, böylece matematik yerine oyuna odaklanabilirsiniz.
-Uygulama tamamen çevrimdışı çalışır, kişisel veri toplamaz, reklam içermez ve ağ erişimi kullanmaz.
-Munchkin hayranı tarafından, gündelik ve masa dostu oyun için uygun bir arkadaş olarak oluşturulmuştur.</string>
+    <string name="how_it_works_body">Counter 123 uygulaması, tüm sayma ihtiyaçlarınız için güvenilir çözümünüzdür. Günlük su alımınızı takip ediyor, egzersiz tekrarlarınızı izliyor veya giderlerinizi hesaplıyor olsanız da, bu çok yönlü program her şeyi kapsar. Sezgisel arayüzü ve güçlü yönetim özellikleri bunu kolaylaştırır.</string>
     <string name="version_title">Sürüm</string>
     <string name="privacy_title">Gizlilik</string>
     <string name="privacy_text">Kişisel veri toplamıyoruz.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">Boş.\nLütfen oyuncu ekleyin</string>
+    <string name="game_empty_players_list">Boş.\nLütfen sayaç ekleyin</string>
     <string name="retry">Yeniden dene</string>
     <string name="error_description">Bağlantınızı kontrol edip tekrar deneyin</string>
-    <string name="dice">Zar</string>
-    <string name="throw_dice">At 🎲</string>
 
 </resources>
 

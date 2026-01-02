@@ -1,12 +1,12 @@
 <resources>
-    <string name="new_game">Nueva partida</string>
+    <string name="new_game">Restablecer contadores</string>
     <string name="about">Acerca de</string>
     <string name="about_app">Acerca de la aplicación</string>
-    <string name="add_player">Añadir jugador</string>
+    <string name="add_player">Añadir contador</string>
     <string name="name">Nombre</string>
     <string name="back">Atrás</string>
     <string name="icon">Icono</string>
-    <string name="delete_player">Eliminar jugador</string>
+    <string name="delete_player">Eliminar contador</string>
     <string name="double_back_press_message">Presione de nuevo para salir</string>
     <string name="add_level">Añadir nivel</string>
     <string name="sub_level">Restar nivel</string>
@@ -24,7 +24,7 @@
     <string name="label_dark_mode">Modo oscuro</string>
     <string name="terms_of_use">Términos de uso</string>
     <string name="terms_last_updated">Última actualización: %1$s</string>
-    <string name="terms_default_date">Diciembre 2024</string>
+    <string name="terms_default_date">Diciembre 2025</string>
     <string name="terms_section_1_title">1. Aceptación de los términos</string>
     <string name="terms_section_1_content">Al instalar o usar esta aplicación, acepta estos términos de uso. Si no está de acuerdo con alguna parte de los términos, no use la aplicación.</string>
     <string name="terms_section_2_title">2. Descripción de la aplicación</string>
@@ -47,39 +47,33 @@
     <string name="terms_section_10_content">Estos términos de uso pueden actualizarse en el futuro. El uso continuado de la aplicación después de los cambios constituye la aceptación de los términos actualizados.</string>
     <string name="terms_section_11_title">11. Información de contacto</string>
     <string name="terms_section_11_content">Si tiene preguntas o comentarios sobre estos términos de uso, puede contactar al desarrollador a través de la plataforma donde se distribuye la aplicación.</string>
-    <string name="terms_footer">Al usar Simple Munchkin Counter, reconoce que ha leído, entendido y acepta estar sujeto a estos términos de uso.</string>
+    <string name="terms_footer">Al usar Counter 123, reconoce que ha leído, entendido y acepta estar sujeto a estos términos de uso.</string>
     <string name="terms_accept_button">Aceptar términos</string>
-    <string name="counter">Contador Munchkin</string>
-    <string name="new_game_title">Nueva partida</string>
-    <string name="new_game_message">¿Está seguro de que desea comenzar una nueva partida?</string>
+    <string name="counter">Contador</string>
+    <string name="new_game_message">¿Está seguro de que desea restablecer todos los contadores?</string>
     <string name="confirm">Confirmar</string>
     <string name="cancel">Cancelar</string>
     <string name="add">Añadir</string>
-    <string name="add_player_message">Seleccione el icono y el nombre del jugador</string>
+    <string name="add_player_message">Seleccione el icono y el nombre del contador</string>
     <string name="input_name">Ingresar nombre</string>
     <string name="select_icon">Seleccionar icono</string>
-    <string name="active_players">Jugadores activos</string>
-    <string name="select_player_toast_message">Por favor, seleccione un jugador</string>
-    <string name="add_player_toast_message">Para añadir más jugadores, abre la configuración</string>
+    <string name="active_players">Contadores activos</string>
+    <string name="select_player_toast_message">Por favor, seleccione un contador</string>
     <string name="max_lenght_name">Longitud máxima del nombre</string>
-    <string name="remove_player">Eliminar jugador</string>
-    <string name="game_empty_active_players_list">No hay jugadores activos. Por favor, añada jugadores en la configuración</string>
+    <string name="remove_player">Eliminar contador</string>
+    <string name="game_empty_active_players_list">No hay contadores activos. Por favor, añada un contador en la configuración</string>
     <string name="application_title">Aplicación</string>
-    <string name="application_description">Esta aplicación es un contador de poder simple y ligero para el juego de mesa Munchkin.</string>
+    <string name="application_description">Esta aplicación es un contador simple y ligero.</string>
     <string name="how_it_works_title">Cómo funciona</string>
-    <string name="how_it_works_body">Ayuda a los jugadores a calcular y rastrear rápidamente la fuerza del personaje durante el juego, para que pueda concentrarse en el gameplay en lugar de las matemáticas.
-La aplicación funciona completamente sin conexión, no recopila datos personales, no contiene anuncios y no usa acceso a la red.
-Creada por un fan de Munchkin como compañero conveniente para un juego casual y amigable para mesa.</string>
+    <string name="how_it_works_body">La aplicación Counter 123 es su solución confiable para todas sus necesidades de conteo. Ya sea que esté rastreando su ingesta diaria de agua, monitoreando sus repeticiones de ejercicio o calculando sus gastos, este programa versátil lo tiene cubierto. Su interfaz intuitiva y potentes funciones de gestión lo hacen fácil.</string>
     <string name="version_title">Versión</string>
     <string name="privacy_title">Privacidad</string>
     <string name="privacy_text">No recopilamos datos personales.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">Vacío.\nPor favor, añade jugadores</string>
+    <string name="game_empty_players_list">Vacío.\nPor favor, añade un contador</string>
     <string name="retry">Reintentar</string>
     <string name="error_description">Comprueba tu conexión e inténtalo de nuevo</string>
-    <string name="dice">Dado</string>
-    <string name="throw_dice">Lanzar 🎲</string>
 
 </resources>
 

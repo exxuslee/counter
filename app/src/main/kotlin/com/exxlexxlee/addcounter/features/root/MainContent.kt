@@ -168,7 +168,7 @@ private fun MainTopBar(
                     viewModel.obtainEvent(MainEvent.OnAddCount)
                 }) {
                     Icon(
-                        painterResource(id = R.drawable.outline_person_add_24),
+                        painterResource(id = R.drawable.round_add_circle_outline_24),
                         contentDescription = stringResource(R.string.add_player)
                     )
                 }

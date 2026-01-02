@@ -1,12 +1,12 @@
 <resources>
-    <string name="new_game">새 게임</string>
+    <string name="new_game">카운터 재설정</string>
     <string name="about">정보</string>
     <string name="about_app">앱 정보</string>
-    <string name="add_player">플레이어 추가</string>
+    <string name="add_player">카운터 추가</string>
     <string name="name">이름</string>
     <string name="back">뒤로</string>
     <string name="icon">아이콘</string>
-    <string name="delete_player">플레이어 삭제</string>
+    <string name="delete_player">카운터 삭제</string>
     <string name="double_back_press_message">다시 누르면 종료됩니다</string>
     <string name="add_level">레벨 추가</string>
     <string name="sub_level">레벨 감소</string>
@@ -24,7 +24,7 @@
     <string name="label_dark_mode">다크 모드</string>
     <string name="terms_of_use">이용 약관</string>
     <string name="terms_last_updated">최종 업데이트: %1$s</string>
-    <string name="terms_default_date">2024년 12월</string>
+    <string name="terms_default_date">2025년 12월</string>
     <string name="terms_section_1_title">1. 약관 수락</string>
     <string name="terms_section_1_content">이 애플리케이션을 설치하거나 사용하면 이 이용 약관에 동의하는 것입니다. 약관의 일부에 동의하지 않으면 앱을 사용하지 마세요.</string>
     <string name="terms_section_2_title">2. 애플리케이션 설명</string>
@@ -47,39 +47,33 @@
     <string name="terms_section_10_content">이 이용 약관은 향후 업데이트될 수 있습니다. 변경 후 애플리케이션을 계속 사용하는 것은 업데이트된 약관에 대한 수락을 구성합니다.</string>
     <string name="terms_section_11_title">11. 연락처 정보</string>
     <string name="terms_section_11_content">이 이용 약관에 대한 질문이나 피드백이 있으면 애플리케이션이 배포되는 플랫폼을 통해 개발자에게 연락할 수 있습니다.</string>
-    <string name="terms_footer">Simple Munchkin Counter를 사용하면 이 이용 약관을 읽고 이해했으며 이에 구속되는 것에 동의한 것으로 인정됩니다.</string>
+    <string name="terms_footer">Counter 123를 사용하면 이 이용 약관을 읽고 이해했으며 이에 구속되는 것에 동의한 것으로 인정됩니다.</string>
     <string name="terms_accept_button">약관 수락</string>
-    <string name="counter">Munchkin 카운터</string>
-    <string name="new_game_title">새 게임</string>
-    <string name="new_game_message">새 게임을 시작하시겠습니까?</string>
+    <string name="counter">카운터</string>
+    <string name="new_game_message">모든 카운터를 재설정하시겠습니까?</string>
     <string name="confirm">확인</string>
     <string name="cancel">취소</string>
     <string name="add">추가</string>
-    <string name="add_player_message">플레이어의 아이콘과 이름을 선택하세요</string>
+    <string name="add_player_message">카운터의 아이콘과 이름을 선택하세요</string>
     <string name="input_name">이름 입력</string>
     <string name="select_icon">아이콘 선택</string>
-    <string name="active_players">활성 플레이어</string>
-    <string name="select_player_toast_message">플레이어를 선택하세요</string>
-    <string name="add_player_toast_message">더 많은 플레이어를 추가하려면 설정을 여세요</string>
+    <string name="active_players">활성 카운터</string>
+    <string name="select_player_toast_message">카운터를 선택하세요</string>
     <string name="max_lenght_name">이름의 최대 길이</string>
-    <string name="remove_player">플레이어 제거</string>
-    <string name="game_empty_active_players_list">활성 플레이어가 없습니다. 설정에서 플레이어를 추가하세요</string>
+    <string name="remove_player">카운터 제거</string>
+    <string name="game_empty_active_players_list">활성 카운터가 없습니다. 설정에서 카운터를 추가하세요</string>
     <string name="application_title">애플리케이션</string>
-    <string name="application_description">이 앱은 보드 게임 Munchkin을 위한 간단하고 가벼운 능력 카운터입니다.</string>
+    <string name="application_description">이 앱은 간단하고 가벼운 카운터입니다.</string>
     <string name="how_it_works_title">작동 방식</string>
-    <string name="how_it_works_body">게임 중 캐릭터의 강도를 빠르게 계산하고 추적하는 데 도움이 되어 수학 대신 게임플레이에 집중할 수 있습니다.
-앱은 완전히 오프라인으로 작동하며, 개인 데이터를 수집하지 않고, 광고가 포함되어 있지 않으며, 네트워크 액세스를 사용하지 않습니다.
-Munchkin 팬이 캐주얼하고 테이블톱 친화적인 플레이를 위한 편리한 동반자로 만들었습니다.</string>
+    <string name="how_it_works_body">Counter 123 앱은 모든 카운팅 요구 사항에 대한 신뢰할 수 있는 솔루션입니다. 일일 물 섭취량을 추적하거나, 운동 반복을 모니터링하거나, 지출을 계산하든, 이 다목적 프로그램이 모든 것을 다룹니다. 직관적인 인터페이스와 강력한 관리 기능으로 쉽게 사용할 수 있습니다.</string>
     <string name="version_title">버전</string>
     <string name="privacy_title">개인정보 보호</string>
     <string name="privacy_text">개인 데이터를 수집하지 않습니다.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">비어 있습니다.\n플레이어를 추가하세요</string>
+    <string name="game_empty_players_list">비어 있습니다.\n카운터를 추가하세요</string>
     <string name="retry">다시 시도</string>
     <string name="error_description">연결을 확인한 후 다시 시도하세요</string>
-    <string name="dice">주사위</string>
-    <string name="throw_dice">던지기 🎲</string>
 
 </resources>
 

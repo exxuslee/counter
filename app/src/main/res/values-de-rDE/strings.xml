@@ -1,12 +1,12 @@
 <resources>
-    <string name="new_game">Neues Spiel</string>
+    <string name="new_game">Zähler zurücksetzen</string>
     <string name="about">Über</string>
     <string name="about_app">Über die App</string>
-    <string name="add_player">Spieler hinzufügen</string>
+    <string name="add_player">Zähler hinzufügen</string>
     <string name="name">Name</string>
     <string name="back">Zurück</string>
     <string name="icon">Symbol</string>
-    <string name="delete_player">Spieler löschen</string>
+    <string name="delete_player">Zähler löschen</string>
     <string name="double_back_press_message">Erneut drücken zum Beenden</string>
     <string name="add_level">Level hinzufügen</string>
     <string name="sub_level">Level subtrahieren</string>
@@ -24,7 +24,7 @@
     <string name="label_dark_mode">Dunkler Modus</string>
     <string name="terms_of_use">Nutzungsbedingungen</string>
     <string name="terms_last_updated">Zuletzt aktualisiert: %1$s</string>
-    <string name="terms_default_date">Dezember 2024</string>
+    <string name="terms_default_date">Dezember 2025</string>
     <string name="terms_section_1_title">1. Annahme der Bedingungen</string>
     <string name="terms_section_1_content">Durch die Installation oder Nutzung dieser Anwendung stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie mit einem Teil der Bedingungen nicht einverstanden sind, verwenden Sie die App bitte nicht.</string>
     <string name="terms_section_2_title">2. Beschreibung der Anwendung</string>
@@ -47,39 +47,33 @@
     <string name="terms_section_10_content">Diese Nutzungsbedingungen können in Zukunft aktualisiert werden. Die fortgesetzte Nutzung der Anwendung nach Änderungen stellt die Annahme der aktualisierten Bedingungen dar.</string>
     <string name="terms_section_11_title">11. Kontaktinformationen</string>
     <string name="terms_section_11_content">Wenn Sie Fragen oder Feedback zu diesen Nutzungsbedingungen haben, können Sie den Entwickler über die Plattform kontaktieren, auf der die Anwendung vertrieben wird.</string>
-    <string name="terms_footer">Durch die Nutzung von Simple Munchkin Counter erkennen Sie an, dass Sie diese Nutzungsbedingungen gelesen, verstanden und sich damit einverstanden erklärt haben, an sie gebunden zu sein.</string>
+    <string name="terms_footer">Durch die Nutzung von Counter 123 erkennen Sie an, dass Sie diese Nutzungsbedingungen gelesen, verstanden und sich damit einverstanden erklärt haben, an sie gebunden zu sein.</string>
     <string name="terms_accept_button">Bedingungen akzeptieren</string>
-    <string name="counter">Munchkin-Zähler</string>
-    <string name="new_game_title">Neues Spiel</string>
-    <string name="new_game_message">Sind Sie sicher, dass Sie ein neues Spiel starten möchten?</string>
+    <string name="counter">Zähler</string>
+    <string name="new_game_message">Sind Sie sicher, dass Sie alle Zähler zurücksetzen möchten?</string>
     <string name="confirm">Bestätigen</string>
     <string name="cancel">Abbrechen</string>
     <string name="add">Hinzufügen</string>
-    <string name="add_player_message">Wählen Sie das Symbol und den Namen des Spielers aus</string>
+    <string name="add_player_message">Wählen Sie das Symbol und den Namen des Zählers aus</string>
     <string name="input_name">Namen eingeben</string>
     <string name="select_icon">Symbol auswählen</string>
-    <string name="active_players">Aktive Spieler</string>
-    <string name="select_player_toast_message">Bitte wählen Sie einen Spieler aus</string>
-    <string name="add_player_toast_message">Um weitere Spieler hinzuzufügen, öffnen Sie die Einstellungen</string>
+    <string name="active_players">Aktive Zähler</string>
+    <string name="select_player_toast_message">Bitte wählen Sie einen Zähler aus</string>
     <string name="max_lenght_name">Maximale Länge des Namens</string>
-    <string name="remove_player">Spieler entfernen</string>
-    <string name="game_empty_active_players_list">Keine aktiven Spieler. Bitte fügen Sie Spieler in den Einstellungen hinzu</string>
+    <string name="remove_player">Zähler entfernen</string>
+    <string name="game_empty_active_players_list">Keine aktiven Zähler. Bitte fügen Sie einen Zähler in den Einstellungen hinzu</string>
     <string name="application_title">Anwendung</string>
-    <string name="application_description">Diese App ist ein einfacher und leichtgewichtiger Stärke-Zähler für das Brettspiel Munchkin.</string>
+    <string name="application_description">Diese App ist ein einfacher und leichtgewichtiger Zähler.</string>
     <string name="how_it_works_title">Wie es funktioniert</string>
-    <string name="how_it_works_body">Sie hilft Spielern, die Charakterstärke während des Spiels schnell zu berechnen und zu verfolgen, damit Sie sich auf das Gameplay konzentrieren können, anstatt auf Mathematik.
-Die App funktioniert vollständig offline, erfasst keine persönlichen Daten, enthält keine Werbung und verwendet keinen Netzwerkzugang.
-Erstellt von einem Munchkin-Fan als praktischer Begleiter für lockeres und tischfreundliches Spielen.</string>
+    <string name="how_it_works_body">Die Counter 123 App ist Ihre zuverlässige Lösung für alle Ihre Zählbedürfnisse. Ob Sie Ihre tägliche Wasseraufnahme verfolgen, Ihre Übungswiederholungen überwachen oder Ihre Ausgaben berechnen, dieses vielseitige Programm deckt alles ab. Die intuitive Benutzeroberfläche und leistungsstarke Verwaltungsfunktionen machen es einfach.</string>
     <string name="version_title">Version</string>
     <string name="privacy_title">Datenschutz</string>
     <string name="privacy_text">Wir erfassen keine persönlichen Daten.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">Leer.\nBitte fügen Sie Spieler hinzu</string>
+    <string name="game_empty_players_list">Leer.\nBitte fügen Sie einen Zähler hinzu</string>
     <string name="retry">Erneut versuchen</string>
     <string name="error_description">Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut</string>
-    <string name="dice">Würfel</string>
-    <string name="throw_dice">Würfeln 🎲</string>
 
 </resources>
 

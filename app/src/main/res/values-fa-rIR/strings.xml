@@ -1,12 +1,12 @@
 <resources>
-    <string name="new_game">بازی جدید</string>
+    <string name="new_game">بازنشانی شمارنده‌ها</string>
     <string name="about">درباره</string>
     <string name="about_app">درباره برنامه</string>
-    <string name="add_player">افزودن بازیکن</string>
+    <string name="add_player">افزودن شمارنده</string>
     <string name="name">نام</string>
     <string name="back">بازگشت</string>
     <string name="icon">آیکون</string>
-    <string name="delete_player">حذف بازیکن</string>
+    <string name="delete_player">حذف شمارنده</string>
     <string name="double_back_press_message">برای خروج دوباره فشار دهید</string>
     <string name="add_level">افزودن سطح</string>
     <string name="sub_level">کاهش سطح</string>
@@ -24,7 +24,7 @@
     <string name="label_dark_mode">حالت تاریک</string>
     <string name="terms_of_use">شرایط استفاده</string>
     <string name="terms_last_updated">آخرین به‌روزرسانی: %1$s</string>
-    <string name="terms_default_date">دسامبر 2024</string>
+    <string name="terms_default_date">دسامبر 2025</string>
     <string name="terms_section_1_title">1. پذیرش شرایط</string>
     <string name="terms_section_1_content">با نصب یا استفاده از این برنامه، شما با این شرایط استفاده موافقت می‌کنید. اگر با هر بخشی از شرایط موافق نیستید، لطفاً از برنامه استفاده نکنید.</string>
     <string name="terms_section_2_title">2. توضیحات برنامه</string>
@@ -47,39 +47,33 @@
     <string name="terms_section_10_content">این شرایط استفاده ممکن است در آینده به‌روزرسانی شود. استفاده مداوم از برنامه پس از تغییرات، پذیرش شرایط به‌روزرسانی شده را تشکیل می‌دهد.</string>
     <string name="terms_section_11_title">11. اطلاعات تماس</string>
     <string name="terms_section_11_content">اگر در مورد این شرایط استفاده سوال یا بازخوردی دارید، می‌توانید از طریق پلتفرمی که برنامه در آن توزیع می‌شود با توسعه‌دهنده تماس بگیرید.</string>
-    <string name="terms_footer">با استفاده از Simple Munchkin Counter، شما تأیید می‌کنید که این شرایط استفاده را خوانده، درک کرده و موافقت کرده‌اید که به آن‌ها پایبند باشید.</string>
+    <string name="terms_footer">با استفاده از Counter 123، شما تأیید می‌کنید که این شرایط استفاده را خوانده، درک کرده و موافقت کرده‌اید که به آن‌ها پایبند باشید.</string>
     <string name="terms_accept_button">پذیرش شرایط</string>
-    <string name="counter">شمارنده Munchkin</string>
-    <string name="new_game_title">بازی جدید</string>
-    <string name="new_game_message">آیا مطمئن هستید که می‌خواهید یک بازی جدید شروع کنید؟</string>
+    <string name="counter">شمارنده</string>
+    <string name="new_game_message">آیا مطمئن هستید که می‌خواهید همه شمارنده‌ها را بازنشانی کنید؟</string>
     <string name="confirm">تأیید</string>
     <string name="cancel">لغو</string>
     <string name="add">افزودن</string>
-    <string name="add_player_message">آیکون و نام بازیکن را انتخاب کنید</string>
+    <string name="add_player_message">آیکون و نام شمارنده را انتخاب کنید</string>
     <string name="input_name">وارد کردن نام</string>
     <string name="select_icon">انتخاب آیکون</string>
-    <string name="active_players">بازیکنان فعال</string>
-    <string name="select_player_toast_message">لطفاً یک بازیکن انتخاب کنید</string>
-    <string name="add_player_toast_message">برای افزودن بازیکنان بیشتر، تنظیمات را باز کنید</string>
+    <string name="active_players">شمارنده‌های فعال</string>
+    <string name="select_player_toast_message">لطفاً یک شمارنده انتخاب کنید</string>
     <string name="max_lenght_name">حداکثر طول نام</string>
-    <string name="remove_player">حذف بازیکن</string>
-    <string name="game_empty_active_players_list">هیچ بازیکن فعالی وجود ندارد. لطفاً بازیکنان را در تنظیمات اضافه کنید</string>
+    <string name="remove_player">حذف شمارنده</string>
+    <string name="game_empty_active_players_list">هیچ شمارنده فعالی وجود ندارد. لطفاً شمارنده را در تنظیمات اضافه کنید</string>
     <string name="application_title">برنامه</string>
-    <string name="application_description">این برنامه یک شمارنده قدرت ساده و سبک برای بازی رومیزی Munchkin است.</string>
+    <string name="application_description">این برنامه یک شمارنده ساده و سبک است.</string>
     <string name="how_it_works_title">نحوه کار</string>
-    <string name="how_it_works_body">به بازیکنان کمک می‌کند تا قدرت شخصیت را در طول بازی به سرعت محاسبه و ردیابی کنند، بنابراین می‌توانید به جای ریاضی روی بازی تمرکز کنید.
-برنامه به طور کامل آفلاین کار می‌کند، هیچ داده شخصی جمع‌آوری نمی‌کند، هیچ تبلیغاتی ندارد و از دسترسی شبکه استفاده نمی‌کند.
-توسط یک طرفدار Munchkin به عنوان یک همراه مناسب برای بازی غیررسمی و مناسب میز ایجاد شده است.</string>
+    <string name="how_it_works_body">برنامه Counter 123 راه حل قابل اعتماد شما برای تمام نیازهای شمارش شماست. چه در حال پیگیری مصرف روزانه آب خود باشید، چه تکرارهای ورزشی خود را نظارت کنید یا هزینه‌های خود را محاسبه کنید، این برنامه همه کاره همه چیز را پوشش می‌دهد. رابط بصری و ویژگی‌های مدیریت قدرتمند آن، استفاده را آسان می‌کند.</string>
     <string name="version_title">نسخه</string>
     <string name="privacy_title">حریم خصوصی</string>
     <string name="privacy_text">ما داده‌های شخصی جمع‌آوری نمی‌کنیم.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">خالی است.\nلطفاً بازیکنان را اضافه کنید</string>
+    <string name="game_empty_players_list">خالی است.\nلطفاً شمارنده را اضافه کنید</string>
     <string name="retry">تلاش مجدد</string>
     <string name="error_description">اتصال خود را بررسی کنید و دوباره تلاش کنید</string>
-    <string name="dice">تاس</string>
-    <string name="throw_dice">انداختن 🎲</string>
 
 </resources>
 

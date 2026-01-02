@@ -54,7 +54,7 @@ fun AddCountDialog(
             ) {
                 Icon(
                     modifier = Modifier.size(32.dp),
-                    painter = painterResource(R.drawable.outline_person_add_24),
+                    painter = painterResource(R.drawable.round_add_circle_outline_24),
                     contentDescription = stringResource(id = R.string.add_player),
                 )
                 HSpacer(8.dp)

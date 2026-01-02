@@ -51,7 +51,7 @@ fun SettingsScreen(
                         contentDescription = stringResource(id = R.string.add_player),
                     )
                     HSpacer(8.dp)
-                    Text(text = stringResource(id = R.string.new_game_title))
+                    Text(text = stringResource(id = R.string.new_game))
                 }
             },
             text = {

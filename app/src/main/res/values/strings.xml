@@ -1,21 +1,17 @@
 <resources>
-    <string name="app_name" translatable="false">Counter</string>
+    <string name="app_name" translatable="false">Counter 123</string>
     <string name="level" translatable="false">🥇</string>
     <string name="bonus" translatable="false">😎</string>
     <string name="life" translatable="false">⚔️</string>
-    <string name="new_game">New game</string>
+    <string name="new_game">Reset counts</string>
     <string name="about">About</string>
     <string name="about_app">About app</string>
-    <string name="add_player">Add player</string>
+    <string name="add_player">Add counter</string>
     <string name="name">Name</string>
     <string name="back">back</string>
     <string name="icon">icon</string>
-    <string name="delete_player">Delete player</string>
+    <string name="delete_player">Delete counter</string>
     <string name="double_back_press_message">Press again to exit</string>
-    <string name="add_level">Add level</string>
-    <string name="sub_level">Sub level</string>
-    <string name="add_bonus">Add bonus</string>
-    <string name="sub_bonus">Sub bonus</string>
     <string name="title_settings">Settings</string>
     <string name="terms_title">Terms of use</string>
     <string name="language">Language</string>
@@ -28,7 +24,7 @@
     <string name="label_dark_mode">Dark mode</string>
     <string name="terms_of_use">Terms of use</string>
     <string name="terms_last_updated">Last updated: %1$s</string>
-    <string name="terms_default_date">December 2024</string>
+    <string name="terms_default_date">December 2025</string>
     <string name="terms_section_1_title">1. Acceptance of Terms</string>
     <string name="terms_section_1_content">By installing or using this application, you agree to these Terms of Use. If you do not agree with any part of the terms, please do not use the app.</string>
     <string name="terms_section_2_title">2. Description of the Application</string>
@@ -51,38 +47,32 @@
     <string name="terms_section_10_content">These Terms of Use may be updated in the future. Continued use of the application after changes are made constitutes acceptance of the updated terms.</string>
     <string name="terms_section_11_title">11. Contact Information</string>
     <string name="terms_section_11_content">If you have questions or feedback regarding these Terms of Use, you may contact the developer through the platform where the application is distributed.</string>
-    <string name="terms_footer">By using Simple Munchkin Counter, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</string>
+    <string name="terms_footer">By using Counter 123, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</string>
     <string name="terms_accept_button">Terms accept</string>
     <string name="counter">Counter</string>
-    <string name="new_game_title">New game</string>
-    <string name="new_game_message">Are you sure you want to start a new game?</string>
+    <string name="new_game_message">Are you sure you want to reset all counters?</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
     <string name="add">Add</string>
-    <string name="add_player_message">Select the player\'s icon and name</string>
+    <string name="add_player_message">Select the counter\'s icon and name</string>
     <string name="input_name">Input name</string>
     <string name="select_icon">Select icon</string>
-    <string name="active_players">Active players</string>
-    <string name="select_player_toast_message">Please, select a player</string>
-    <string name="add_player_toast_message">To add more players, open the settings</string>
+    <string name="active_players">Active counters</string>
+    <string name="select_player_toast_message">Please, select a counter</string>
     <string name="max_lenght_name">Maximum length of name</string>
-    <string name="remove_player">Remove player</string>
-    <string name="game_empty_active_players_list">Empty active players. Please add the players in settings</string>
+    <string name="remove_player">Remove counter</string>
+    <string name="game_empty_active_players_list">Empty active counters. Please add the counter in settings</string>
     <string name="application_title">Application</string>
-    <string name="application_description">This app is a simple and lightweight power counter for the board game Munchkin.</string>
+    <string name="application_description">This app is a simple and lightweight power counter.</string>
     <string name="how_it_works_title">How it Work</string>
-    <string name="how_it_works_body">It helps players quickly calculate and track character strength during the game, so you can focus on gameplay instead of math.
-The app works fully offline, does not collect any personal data, contains no ads, and does not use network access.
-Created by a fan of Munchkin as a convenient companion for casual and tabletop-friendly play.</string>
+    <string name="how_it_works_body">The Counter 123 app is your reliable solution for all your counting needs. Whether you\'re tracking your daily water intake, monitoring your exercise repetitions, or calculating your expenses, this versatile program has you covered. Its intuitive interface and powerful management features make it easy.</string>
     <string name="version_title">Version</string>
     <string name="privacy_title">Privacy</string>
     <string name="privacy_text">We do not collect personal data.</string>
     <string name="rate_app_title">Rate app</string>
     <string name="rate_app_button">Rate this app</string>
-    <string name="game_empty_players_list">Empty.\nPlease add the players</string>
+    <string name="game_empty_players_list">Empty.\nPlease add the counter</string>
     <string name="retry">Retry</string>
     <string name="error_description">Check your connection and try again</string>
-    <string name="dice">Dice</string>
-    <string name="throw_dice">Throw 🎲</string>
 
 </resources>
