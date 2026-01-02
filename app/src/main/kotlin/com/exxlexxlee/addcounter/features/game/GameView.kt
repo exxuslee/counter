@@ -12,9 +12,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -29,13 +27,11 @@ import com.exxlexxlee.domain.model.UiState
 @Composable
 fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
 
+    val orientation = LocalConfiguration.current.orientation
     when (gameViewState.state) {
 
         UiState.Idle -> {
-            val view = LocalView.current
-            val isLandscape =
-                LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
-
+            val isLandscape = orientation == Configuration.ORIENTATION_LANDSCAPE
             Column(
                 modifier = Modifier.fillMaxSize(),
             ) {
@@ -57,7 +53,12 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
                 )
 
                 LazyVerticalGrid(
-                    columns = GridCells.Fixed(if (isLandscape) 3 else 2),
+                    columns = GridCells.Fixed(
+                        getGridColumns(
+                            isLandscape,
+                            gameViewState.activeCounts.size
+                        )
+                    ),
                     modifier = Modifier.weight(1f),
                     contentPadding = PaddingValues(vertical = 8.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -81,4 +82,18 @@ fun GameView(gameViewState: GameViewState, eventHandler: (Event) -> Unit) {
 
         UiState.Loading -> {}
     }
+}
+
+private fun getGridColumns(isLandscape: Boolean, activeCounts: Int): Int {
+    val columns = if (isLandscape) when (activeCounts) {
+        in 0..1 -> 1
+        in 2..4 -> 2
+        in 5..6 -> 3
+        else -> 4
+    } else when (activeCounts) {
+        in 0..5 -> 1
+        in 6..12 -> 2
+        else -> 3
+    }
+    return columns
 }
