@@ -8,10 +8,6 @@
     <string name="icon">图标</string>
     <string name="delete_player">删除计数器</string>
     <string name="double_back_press_message">再次按返回键退出</string>
-    <string name="add_level">增加等级</string>
-    <string name="sub_level">减少等级</string>
-    <string name="add_bonus">增加奖励</string>
-    <string name="sub_bonus">减少奖励</string>
     <string name="title_settings">设置</string>
     <string name="terms_title">使用条款</string>
     <string name="language">语言</string>

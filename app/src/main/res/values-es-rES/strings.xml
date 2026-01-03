@@ -8,10 +8,6 @@
     <string name="icon">Icono</string>
     <string name="delete_player">Eliminar contador</string>
     <string name="double_back_press_message">Presione de nuevo para salir</string>
-    <string name="add_level">Añadir nivel</string>
-    <string name="sub_level">Restar nivel</string>
-    <string name="add_bonus">Añadir bonus</string>
-    <string name="sub_bonus">Restar bonus</string>
     <string name="title_settings">Configuración</string>
     <string name="terms_title">Términos de uso</string>
     <string name="language">Idioma</string>

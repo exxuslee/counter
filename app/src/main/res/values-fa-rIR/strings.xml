@@ -8,10 +8,6 @@
     <string name="icon">آیکون</string>
     <string name="delete_player">حذف شمارنده</string>
     <string name="double_back_press_message">برای خروج دوباره فشار دهید</string>
-    <string name="add_level">افزودن سطح</string>
-    <string name="sub_level">کاهش سطح</string>
-    <string name="add_bonus">افزودن پاداش</string>
-    <string name="sub_bonus">کاهش پاداش</string>
     <string name="title_settings">تنظیمات</string>
     <string name="terms_title">شرایط استفاده</string>
     <string name="language">زبان</string>

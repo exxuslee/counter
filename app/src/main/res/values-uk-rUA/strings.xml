@@ -8,10 +8,6 @@
     <string name="icon">Іконка</string>
     <string name="delete_player">Видалити лічильник</string>
     <string name="double_back_press_message">Натисніть ще раз, щоб вийти</string>
-    <string name="add_level">Додати рівень</string>
-    <string name="sub_level">Зменшити рівень</string>
-    <string name="add_bonus">Додати бонус</string>
-    <string name="sub_bonus">Зменшити бонус</string>
     <string name="title_settings">Налаштування</string>
     <string name="terms_title">Умови використання</string>
     <string name="language">Мова</string>

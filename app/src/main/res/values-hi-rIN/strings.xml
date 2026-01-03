@@ -8,10 +8,6 @@
     <string name="icon">आइकन</string>
     <string name="delete_player">काउंटर हटाएं</string>
     <string name="double_back_press_message">बाहर निकलने के लिए फिर से दबाएं</string>
-    <string name="add_level">स्तर जोड़ें</string>
-    <string name="sub_level">स्तर घटाएं</string>
-    <string name="add_bonus">बोनस जोड़ें</string>
-    <string name="sub_bonus">बोनस घटाएं</string>
     <string name="title_settings">सेटिंग्स</string>
     <string name="terms_title">उपयोग की शर्तें</string>
     <string name="language">भाषा</string>

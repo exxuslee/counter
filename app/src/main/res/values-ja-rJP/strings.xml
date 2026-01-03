@@ -8,10 +8,6 @@
     <string name="icon">アイコン</string>
     <string name="delete_player">カウンターを削除</string>
     <string name="double_back_press_message">もう一度押して終了</string>
-    <string name="add_level">レベルを追加</string>
-    <string name="sub_level">レベルを減らす</string>
-    <string name="add_bonus">ボーナスを追加</string>
-    <string name="sub_bonus">ボーナスを減らす</string>
     <string name="title_settings">設定</string>
     <string name="terms_title">利用規約</string>
     <string name="language">言語</string>

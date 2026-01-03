@@ -8,10 +8,6 @@
     <string name="icon">آئیکن</string>
     <string name="delete_player">کاؤنٹر حذف کریں</string>
     <string name="double_back_press_message">باہر نکلنے کے لیے دوبارہ دبائیں</string>
-    <string name="add_level">لیول شامل کریں</string>
-    <string name="sub_level">لیول کم کریں</string>
-    <string name="add_bonus">بونس شامل کریں</string>
-    <string name="sub_bonus">بونس کم کریں</string>
     <string name="title_settings">ترتیبات</string>
     <string name="terms_title">استعمال کی شرائط</string>
     <string name="language">زبان</string>

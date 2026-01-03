@@ -8,10 +8,6 @@
     <string name="icon">Иконка</string>
     <string name="delete_player">Удалить счетчик</string>
     <string name="double_back_press_message">Нажмите снова, чтобы выйти</string>
-    <string name="add_level">Добавить уровень</string>
-    <string name="sub_level">Убавить уровень</string>
-    <string name="add_bonus">Добавить бонус</string>
-    <string name="sub_bonus">Убавить бонус</string>
     <string name="title_settings">Настройки</string>
     <string name="terms_title">Условия использования</string>
     <string name="language">Язык</string>

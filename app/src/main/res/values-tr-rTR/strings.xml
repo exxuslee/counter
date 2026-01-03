@@ -8,10 +8,6 @@
     <string name="icon">Simge</string>
     <string name="delete_player">Sayacı sil</string>
     <string name="double_back_press_message">Çıkmak için tekrar basın</string>
-    <string name="add_level">Seviye ekle</string>
-    <string name="sub_level">Seviye azalt</string>
-    <string name="add_bonus">Bonus ekle</string>
-    <string name="sub_bonus">Bonus azalt</string>
     <string name="title_settings">Ayarlar</string>
     <string name="terms_title">Kullanım koşulları</string>
     <string name="language">Dil</string>

@@ -8,10 +8,6 @@
     <string name="icon">Symbol</string>
     <string name="delete_player">Zähler löschen</string>
     <string name="double_back_press_message">Erneut drücken zum Beenden</string>
-    <string name="add_level">Level hinzufügen</string>
-    <string name="sub_level">Level subtrahieren</string>
-    <string name="add_bonus">Bonus hinzufügen</string>
-    <string name="sub_bonus">Bonus subtrahieren</string>
     <string name="title_settings">Einstellungen</string>
     <string name="terms_title">Nutzungsbedingungen</string>
     <string name="language">Sprache</string>
