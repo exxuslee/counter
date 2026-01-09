@@ -93,7 +93,7 @@ fun AboutView() {
             item {
                 Column {
                     Text(
-                        text = "© 2025 Simple Munchkin Counter.",
+                        text = "2025 Counter 123 ©",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(bottom = 24.dp)

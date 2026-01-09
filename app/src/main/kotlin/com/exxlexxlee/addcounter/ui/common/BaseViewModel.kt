@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
 abstract class BaseViewModel<State : Any, Action, Event>(initialState: State) : ViewModel() {
     private val _viewStates = MutableStateFlow(initialState)
@@ -20,7 +21,7 @@ abstract class BaseViewModel<State : Any, Action, Event>(initialState: State) : 
     protected var viewState: State
         get() = _viewStates.value
         set(value) {
-            _viewStates.value = value
+            _viewStates.update { value }
         }
 
     protected var viewAction: Action?

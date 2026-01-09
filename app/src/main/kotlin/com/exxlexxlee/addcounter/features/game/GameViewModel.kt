@@ -21,7 +21,7 @@ class GameViewModel(
     private var isSoundEnabled: Boolean = false
 
     init {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             playersUseCase.counts.collect {
                 val activePlayers = it.filter { player -> player.active }
                 viewState = viewState.copy(
@@ -72,6 +72,7 @@ class GameViewModel(
                 viewModelScope.launch(Dispatchers.IO) {
                     playersUseCase.save(viewEvent.count)
                 }
+                clearAction()
             }
 
             Event.DialogAddPlayer -> viewAction = Action.AddPlayer
