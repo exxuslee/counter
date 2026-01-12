@@ -1,7 +1,9 @@
 package com.exxlexxlee.addcounter.managers
 
 import android.content.Context
+import androidx.work.Constraints
 import androidx.work.ExistingWorkPolicy
+import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
@@ -25,9 +27,13 @@ class PuzzleWorkManager(context: Context) {
 
     fun startWork() {
         if (isWorkRunning()) return
+        val constraints = Constraints.Builder()
+            .setRequiresBatteryNotLow(true)
+            .build()
         val request = OneTimeWorkRequestBuilder<PuzzleWorker>()
             .addTag(WORK_TAG)
             .setInitialDelay(5, TimeUnit.MINUTES)
+            .setConstraints(constraints)
             .build()
         workManager.enqueueUniqueWork(WORK_NAME, ExistingWorkPolicy.KEEP, request)
     }
