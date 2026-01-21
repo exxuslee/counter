@@ -65,8 +65,8 @@
     <string name="version_title">ورژن</string>
     <string name="privacy_title">رازداری</string>
     <string name="privacy_text">ہم ذاتی ڈیٹا جمع نہیں کرتے۔</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">ایپ کو ریٹ کریں</string>
+    <string name="rate_app_button">اس ایپ کو ریٹ کریں</string>
     <string name="game_empty_players_list">خالی ہے۔\nبراہ کرم کاؤنٹر شامل کریں</string>
     <string name="retry">دوبارہ کوشش کریں</string>
     <string name="error_description">اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں</string>

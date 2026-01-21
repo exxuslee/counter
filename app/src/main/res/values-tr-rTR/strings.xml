@@ -65,8 +65,8 @@
     <string name="version_title">Sürüm</string>
     <string name="privacy_title">Gizlilik</string>
     <string name="privacy_text">Kişisel veri toplamıyoruz.</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">Uygulamayı değerlendir</string>
+    <string name="rate_app_button">Bu uygulamayı değerlendir</string>
     <string name="game_empty_players_list">Boş.\nLütfen sayaç ekleyin</string>
     <string name="retry">Yeniden dene</string>
     <string name="error_description">Bağlantınızı kontrol edip tekrar deneyin</string>

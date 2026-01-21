@@ -65,8 +65,8 @@
     <string name="version_title">Версія</string>
     <string name="privacy_title">Конфіденційність</string>
     <string name="privacy_text">Ми не збираємо персональні дані.</string>
-    <string name="rate_app_title">Оцінити додаток</string>
-    <string name="rate_app_button">Оцінити додаток</string>
+    <string name="rate_app_title">Оцінити застосунок</string>
+    <string name="rate_app_button">Оцінити цей застосунок</string>
     <string name="game_empty_players_list">Порожньо.\nБудь ласка, додайте лічильник</string>
     <string name="retry">Повторити</string>
     <string name="error_description">Перевірте підключення до мережі і спробуйте ще раз</string>

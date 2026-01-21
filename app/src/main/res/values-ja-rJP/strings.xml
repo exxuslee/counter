@@ -65,8 +65,8 @@
     <string name="version_title">バージョン</string>
     <string name="privacy_title">プライバシー</string>
     <string name="privacy_text">個人データは収集しません。</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">アプリを評価</string>
+    <string name="rate_app_button">このアプリを評価する</string>
     <string name="game_empty_players_list">空です。\nカウンターを追加してください</string>
     <string name="retry">再試行</string>
     <string name="error_description">接続を確認して、もう一度お試しください</string>

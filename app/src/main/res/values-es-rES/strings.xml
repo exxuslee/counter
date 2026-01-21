@@ -65,8 +65,8 @@
     <string name="version_title">Versión</string>
     <string name="privacy_title">Privacidad</string>
     <string name="privacy_text">No recopilamos datos personales.</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">Calificar la app</string>
+    <string name="rate_app_button">Calificar esta app</string>
     <string name="game_empty_players_list">Vacío.\nPor favor, añade un contador</string>
     <string name="retry">Reintentar</string>
     <string name="error_description">Comprueba tu conexión e inténtalo de nuevo</string>

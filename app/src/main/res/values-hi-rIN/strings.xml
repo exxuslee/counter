@@ -65,8 +65,8 @@
     <string name="version_title">संस्करण</string>
     <string name="privacy_title">गोपनीयता</string>
     <string name="privacy_text">हम व्यक्तिगत डेटा एकत्र नहीं करते हैं।</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">ऐप को रेट करें</string>
+    <string name="rate_app_button">इस ऐप को रेट करें</string>
     <string name="game_empty_players_list">खाली है।\nकृपया काउंटर जोड़ें</string>
     <string name="retry">पुनः प्रयास करें</string>
     <string name="error_description">अपना कनेक्शन जांचें और फिर से प्रयास करें</string>

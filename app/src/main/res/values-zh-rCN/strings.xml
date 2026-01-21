@@ -65,8 +65,8 @@
     <string name="version_title">版本</string>
     <string name="privacy_title">隐私</string>
     <string name="privacy_text">我们不收集个人数据。</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">为应用评分</string>
+    <string name="rate_app_button">为此应用评分</string>
     <string name="game_empty_players_list">空的。\n请添加计数器</string>
     <string name="retry">重试</string>
     <string name="error_description">请检查您的网络连接然后重试</string>

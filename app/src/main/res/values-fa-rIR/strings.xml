@@ -65,8 +65,8 @@
     <string name="version_title">نسخه</string>
     <string name="privacy_title">حریم خصوصی</string>
     <string name="privacy_text">ما داده‌های شخصی جمع‌آوری نمی‌کنیم.</string>
-    <string name="rate_app_title">Rate app</string>
-    <string name="rate_app_button">Rate this app</string>
+    <string name="rate_app_title">امتیاز دادن به برنامه</string>
+    <string name="rate_app_button">به این برنامه امتیاز دهید</string>
     <string name="game_empty_players_list">خالی است.\nلطفاً شمارنده را اضافه کنید</string>
     <string name="retry">تلاش مجدد</string>
     <string name="error_description">اتصال خود را بررسی کنید و دوباره تلاش کنید</string>
