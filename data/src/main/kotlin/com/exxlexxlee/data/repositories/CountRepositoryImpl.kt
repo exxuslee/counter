@@ -10,6 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
@@ -19,6 +20,7 @@ class CountRepositoryImpl(
 
     override val activeCounts: StateFlow<List<Count>> = countDAO.activeCountsFlow()
         .map { list -> list.map { it.toDomain() } }
+        .flowOn(Dispatchers.IO)
         .stateIn(
             scope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
             started = SharingStarted.WhileSubscribed(5000),
@@ -27,6 +29,7 @@ class CountRepositoryImpl(
 
     override val counts: StateFlow<List<Count>> = countDAO.countsFlow()
         .map { list -> list.map { it.toDomain() } }
+        .flowOn(Dispatchers.IO)
         .stateIn(
             scope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
             started = SharingStarted.WhileSubscribed(5000),

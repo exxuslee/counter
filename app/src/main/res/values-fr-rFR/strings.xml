@@ -71,6 +71,11 @@
     <string name="retry">Réessayer</string>
     <string name="error_description">Vérifiez votre connexion et réessayez</string>
     <string name="sound">Son</string>
+    <string name="start">Démarrer</string>
+    <string name="increment">Incrémenter</string>
+    <string name="sub">Soustraire</string>
+    <string name="multiple">Multiplier</string>
+    <string name="divide">Diviser</string>
 
 </resources>
 

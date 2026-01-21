@@ -71,6 +71,11 @@
     <string name="retry">تلاش مجدد</string>
     <string name="error_description">اتصال خود را بررسی کنید و دوباره تلاش کنید</string>
     <string name="sound">صدا</string>
+    <string name="start">شروع</string>
+    <string name="increment">افزایش</string>
+    <string name="sub">کاهش</string>
+    <string name="multiple">ضرب</string>
+    <string name="divide">تقسیم</string>
 
 </resources>
 

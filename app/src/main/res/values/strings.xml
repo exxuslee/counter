@@ -75,5 +75,10 @@
     <string name="retry">Retry</string>
     <string name="error_description">Check your connection and try again</string>
     <string name="sound">Sound</string>
+    <string name="start">Start</string>
+    <string name="increment">Increment</string>
+    <string name="sub">Subtract</string>
+    <string name="multiple">Multiple</string>
+    <string name="divide">Divide</string>
 
 </resources>

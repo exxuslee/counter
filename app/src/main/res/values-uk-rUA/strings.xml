@@ -71,5 +71,10 @@
     <string name="retry">Повторити</string>
     <string name="error_description">Перевірте підключення до мережі і спробуйте ще раз</string>
     <string name="sound">Звук</string>
+    <string name="start">Почати</string>
+    <string name="increment">Збільшити</string>
+    <string name="sub">Відняти</string>
+    <string name="multiple">Помножити</string>
+    <string name="divide">Поділити</string>
 
 </resources>

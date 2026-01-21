@@ -71,6 +71,11 @@
     <string name="retry">再試行</string>
     <string name="error_description">接続を確認して、もう一度お試しください</string>
     <string name="sound">サウンド</string>
+    <string name="start">開始</string>
+    <string name="increment">増加</string>
+    <string name="sub">減算</string>
+    <string name="multiple">乗算</string>
+    <string name="divide">除算</string>
 
 </resources>
 

@@ -71,6 +71,11 @@
     <string name="retry">다시 시도</string>
     <string name="error_description">연결을 확인한 후 다시 시도하세요</string>
     <string name="sound">사운드</string>
+    <string name="start">시작</string>
+    <string name="increment">증가</string>
+    <string name="sub">감소</string>
+    <string name="multiple">곱하기</string>
+    <string name="divide">나누기</string>
 
 </resources>
 

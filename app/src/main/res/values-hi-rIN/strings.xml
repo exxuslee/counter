@@ -71,6 +71,11 @@
     <string name="retry">पुनः प्रयास करें</string>
     <string name="error_description">अपना कनेक्शन जांचें और फिर से प्रयास करें</string>
     <string name="sound">आवाज़</string>
+    <string name="start">शुरू</string>
+    <string name="increment">बढ़ाएँ</string>
+    <string name="sub">घटाएँ</string>
+    <string name="multiple">गुणा</string>
+    <string name="divide">भाग</string>
 
 </resources>
 

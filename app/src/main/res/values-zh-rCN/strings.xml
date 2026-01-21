@@ -71,6 +71,11 @@
     <string name="retry">重试</string>
     <string name="error_description">请检查您的网络连接然后重试</string>
     <string name="sound">声音</string>
+    <string name="start">开始</string>
+    <string name="increment">增加</string>
+    <string name="sub">减少</string>
+    <string name="multiple">乘法</string>
+    <string name="divide">除法</string>
 
 </resources>
 

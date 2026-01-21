@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.dp
 import com.exxlexxlee.addcounter.R
 import com.exxlexxlee.domain.model.Count
 import com.exxlexxlee.domain.model.Operator
-import kotlin.random.Random
 import java.math.BigDecimal
+import kotlin.random.Random
 
 
 @Composable
@@ -40,7 +40,7 @@ fun AddCountDialog(
     onAdd: (Count) -> Unit,
 ) {
     var selectedIcon by remember { mutableIntStateOf(Random.nextInt(Icons.all.size)) }
-    var selectedColor by remember { mutableIntStateOf(0) }
+    var selectedColor by remember { mutableIntStateOf(Random.nextInt(Icons.colors.size)) }
     var name by remember { mutableStateOf("") }
     var start by remember { mutableStateOf("0") }
     var increment by remember { mutableStateOf("1") }
@@ -158,7 +158,7 @@ fun AddCountDialog(
                             start = newValue
                         }
                     },
-                    label = { Text("Start") },
+                    label = { Text(stringResource(R.string.start)) },
                     placeholder = { Text("0") },
                     singleLine = true,
                 )
@@ -171,7 +171,7 @@ fun AddCountDialog(
                             increment = newValue
                         }
                     },
-                    label = { Text("Increment") },
+                    label = { Text(stringResource(R.string.increment)) },
                     placeholder = { Text("1") },
                     singleLine = true,
                     leadingIcon = {
@@ -191,12 +191,22 @@ fun AddCountDialog(
                             ) {
                                 Operator.entries.forEach { operator ->
                                     DropdownMenuItem(
-                                        text = {
+                                        leadingIcon = {
                                             Image(
-                                            painter = painterResource(id = operator.res),
-                                            modifier = Modifier.size(36.dp),
-                                            contentDescription = stringResource(R.string.select_icon)
-                                        ) },
+                                                painter = painterResource(id = operator.res),
+                                                modifier = Modifier.size(36.dp),
+                                                contentDescription = stringResource(R.string.select_icon)
+                                            )
+                                        },
+                                        text = {
+                                            val text = when (operator) {
+                                                Operator.ADD -> stringResource(R.string.add)
+                                                Operator.SUBTRACT -> stringResource(R.string.sub)
+                                                Operator.MULTIPLY -> stringResource(R.string.multiple)
+                                                Operator.DIVIDE -> stringResource(R.string.divide)
+                                            }
+                                            Text(text)
+                                        },
                                         onClick = {
                                             selectedOperator = operator
                                             expandedOperator = false
@@ -223,15 +233,17 @@ fun AddCountDialog(
                     } catch (e: NumberFormatException) {
                         BigDecimal.ONE
                     }
-                    onAdd.invoke(Count(
-                        name = name,
-                        start = startValue,
-                        current = startValue,
-                        increment = incrementValue,
-                        operator = selectedOperator,
-                        icon = selectedIcon,
-                        color = selectedColor,
-                    ))
+                    onAdd.invoke(
+                        Count(
+                            name = name,
+                            start = startValue,
+                            current = startValue,
+                            increment = incrementValue,
+                            operator = selectedOperator,
+                            icon = selectedIcon,
+                            color = selectedColor,
+                        )
+                    )
                 }
             ) {
                 Text(

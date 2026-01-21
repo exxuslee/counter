@@ -71,6 +71,11 @@
     <string name="retry">Yeniden dene</string>
     <string name="error_description">Bağlantınızı kontrol edip tekrar deneyin</string>
     <string name="sound">Ses</string>
+    <string name="start">Başlat</string>
+    <string name="increment">Artır</string>
+    <string name="sub">Çıkar</string>
+    <string name="multiple">Çarp</string>
+    <string name="divide">Böl</string>
 
 </resources>
 
