@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     id("com.android.application")
@@ -8,10 +9,33 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
+val localProperties = Properties().apply {
+    val localFile = rootProject.file("local.properties")
+    if (localFile.exists()) {
+        localFile.inputStream().use { load(it) }
+    }
+}
 
 android {
     namespace = "com.exxlexxlee.addcounter"
     compileSdk = property("version.compileSdk").toString().toInt()
+
+    bundle {
+        language {
+            @Suppress("UnstableApiUsage")
+            enableSplit = false
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file(localProperties.getProperty("RELEASE_STORE_FILE"))
+            storePassword = localProperties.getProperty("RELEASE_STORE_PASSWORD")
+            keyAlias = localProperties.getProperty("RELEASE_KEY_ALIAS")
+            keyPassword = localProperties.getProperty("RELEASE_KEY_PASSWORD")
+            enableV1Signing = true
+        }
+    }
 
     defaultConfig {
         applicationId = "com.exxlexxlee.addcounter"
@@ -27,8 +51,12 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             ndk {
                 debugSymbolLevel = "SYMBOL_TABLE"
             }
