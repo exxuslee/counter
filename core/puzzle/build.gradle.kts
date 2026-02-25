@@ -67,7 +67,7 @@ kotlin {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("fr.acinq.secp256k1:secp256k1-kmp-jni-android:0.22.0")
+    implementation(libs.secp256k1.kmp.jni.android)
     implementation(libs.androidx.work.runtime.ktx)
 
     implementation(libs.ktor.client.core)
